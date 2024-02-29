@@ -27,8 +27,9 @@ using OpenAPIDateConverter = order.Client.OpenAPIDateConverter;
 namespace order.Model
 {
     /// <summary>
-    /// Defines OrderDataSubtotalCode
+    ///  - ITEMS: gross discount items amount.  - ITEMS_DISCOUNTED: discounted items amount.  - DISCOUNT: discount amount. It is a NEGATIVE amount.
     /// </summary>
+    /// <value> - ITEMS: gross discount items amount.  - ITEMS_DISCOUNTED: discounted items amount.  - DISCOUNT: discount amount. It is a NEGATIVE amount.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum OrderDataSubtotalCode
     {

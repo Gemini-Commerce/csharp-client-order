@@ -6,23 +6,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId**| **string** |   | [optional]
-**Number**| **string** |   | [optional]
+**TenantId**| **string** |   |
+**Number**| **string** |   |
 **Channel**| **string** |   | [optional]
-**Market**| **string** |   | [optional]
-**Locale**| **string** |   | [optional]
-**Items**| [**List<OrderOrderDataItem>**](OrderOrderDataItem.md) |   | [optional]
+**Market**| **string** |   |
+**Locale**| **string** |   |
+**Items**| [**List<OrderOrderDataItem>**](OrderOrderDataItem.md) |   |
 **PaymentsInfo**| [**List<OrderDataPaymentInfo>**](OrderDataPaymentInfo.md) |   | [optional]
 **ShipmentsInfo**| [**List<OrderDataShipmentInfo>**](OrderDataShipmentInfo.md) |   | [optional]
 **Promotions**| [**List<OrderDataPromotionInfo>**](OrderDataPromotionInfo.md) |   | [optional]
 **Payments**| [**List<CreateOrderRequestInitialPayment>**](CreateOrderRequestInitialPayment.md) |   | [optional]
-**Currency**| **OrderCurrency** |  for more information please, see Model/OrderCurrency.php  | [optional]
-**Subtotals**| [**Dictionary<string, OrderDataSubtotal>**](OrderDataSubtotal.md) |   | [optional]
-**Totals**| [**Dictionary<string, OrderDataTotal>**](OrderDataTotal.md) |   | [optional]
-**VatIncluded**| **bool** |   | [optional]
-**BillingAddress**| [**OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
-**ShippingAddress**| [**OrderPostalAddress**](OrderPostalAddress.md) |   | [optional]
-**CustomerInfo**| [**OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   | [optional]
+**Currency**| **OrderCurrency** |  for more information please, see Model/OrderCurrency.php  |
+**Subtotals**| [**Dictionary<string, OrderDataSubtotal>**](OrderDataSubtotal.md) |   |
+**Totals**| [**Dictionary<string, OrderDataTotal>**](OrderDataTotal.md) |   |
+**VatIncluded**| **bool** |   |
+**BillingAddress**| [**OrderPostalAddress**](OrderPostalAddress.md) |   |
+**ShippingAddress**| [**OrderPostalAddress**](OrderPostalAddress.md) |   |
+**CustomerInfo**| [**OrderDataCustomerInfo**](OrderDataCustomerInfo.md) |   |
 **CartGrn**| **string** |   | [optional]
 **OnHold**| **bool** |   | [optional]
 **Notes**| **string** |   | [optional]

@@ -85,6 +85,10 @@ namespace Example
 
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderApproveOrderRequest(); // OrderApproveOrderRequest | 
@@ -144,6 +148,8 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**ListOrdersByCustomer**](docs/OrderApi.md#listordersbycustomer) | **POST** /order.Order/ListOrdersByCustomer | List Orders by Customer
 *OrderApi* | [**ListOrdersByNumbers**](docs/OrderApi.md#listordersbynumbers) | **POST** /order.Order/ListOrdersByNumbers | List Orders by Numbers
 *OrderApi* | [**ListShipments**](docs/OrderApi.md#listshipments) | **POST** /order.Order/ListShipments | List Shipments
+*OrderApi* | [**OrderAddDocument**](docs/OrderApi.md#orderadddocument) | **POST** /order.Order/AddDocument | Documents
+*OrderApi* | [**OrderRemoveDocumentByCode**](docs/OrderApi.md#orderremovedocumentbycode) | **POST** /order.Order/RemoveDocumentByCode | 
 *OrderApi* | [**PrintOrdersLabels**](docs/OrderApi.md#printorderslabels) | **POST** /order.Order/PrintOrdersLabels | Print Orders Labels
 *OrderApi* | [**QuashFulfillment**](docs/OrderApi.md#quashfulfillment) | **POST** /order.Order/QuashFulfillment | Quash Fulfillment
 *OrderApi* | [**QuashShipment**](docs/OrderApi.md#quashshipment) | **POST** /order.Order/QuashShipment | Quash Shipment
@@ -171,6 +177,9 @@ Class | Method | HTTP request | Description
  - [Model.CreateOrderRequestInitialPayment](docs/CreateOrderRequestInitialPayment.md)
  - [Model.ImportOrderRequestImportedPayment](docs/ImportOrderRequestImportedPayment.md)
  - [Model.InitialPaymentInitialTransaction](docs/InitialPaymentInitialTransaction.md)
+ - [Model.ItemProductConfigurationStep](docs/ItemProductConfigurationStep.md)
+ - [Model.OptionImage](docs/OptionImage.md)
+ - [Model.OrderAddDocumentRequest](docs/OrderAddDocumentRequest.md)
  - [Model.OrderApproveOrderRequest](docs/OrderApproveOrderRequest.md)
  - [Model.OrderAssignShipmentRequest](docs/OrderAssignShipmentRequest.md)
  - [Model.OrderByDirection](docs/OrderByDirection.md)
@@ -190,6 +199,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderCreateShipmentRequest](docs/OrderCreateShipmentRequest.md)
  - [Model.OrderCurrency](docs/OrderCurrency.md)
  - [Model.OrderDataCustomerInfo](docs/OrderDataCustomerInfo.md)
+ - [Model.OrderDataDocument](docs/OrderDataDocument.md)
  - [Model.OrderDataHistory](docs/OrderDataHistory.md)
  - [Model.OrderDataPaymentInfo](docs/OrderDataPaymentInfo.md)
  - [Model.OrderDataPromotionInfo](docs/OrderDataPromotionInfo.md)
@@ -240,6 +250,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderRefundAmount](docs/OrderRefundAmount.md)
  - [Model.OrderRefundAmountCode](docs/OrderRefundAmountCode.md)
  - [Model.OrderRefundItem](docs/OrderRefundItem.md)
+ - [Model.OrderRemoveDocumentByCodeRequest](docs/OrderRemoveDocumentByCodeRequest.md)
  - [Model.OrderReportFulfillmentErrorRequest](docs/OrderReportFulfillmentErrorRequest.md)
  - [Model.OrderReportFulfillmentNotResolvableRequest](docs/OrderReportFulfillmentNotResolvableRequest.md)
  - [Model.OrderReportFulfillmentReadyRequest](docs/OrderReportFulfillmentReadyRequest.md)
@@ -264,6 +275,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderUpdatePaymentRequest](docs/OrderUpdatePaymentRequest.md)
  - [Model.PaymentCcInfo](docs/PaymentCcInfo.md)
  - [Model.PrintOrdersLabelsResponseFailedOrder](docs/PrintOrdersLabelsResponseFailedOrder.md)
+ - [Model.ProductConfigurationStepOption](docs/ProductConfigurationStepOption.md)
  - [Model.ProtobufAny](docs/ProtobufAny.md)
  - [Model.ProtobufNullValue](docs/ProtobufNullValue.md)
  - [Model.RpcStatus](docs/RpcStatus.md)
@@ -274,5 +286,20 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+<a id="Authorization"></a>
+### Authorization
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
+
+<a id="standardAuthorization"></a>
+### standardAuthorization
+
+- **Type**: OAuth
+- **Flow**: implicit
+- **Authorization URL**: 
+- **Scopes**: N/A
 

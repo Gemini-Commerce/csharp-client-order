@@ -41,16 +41,17 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderOrderData" /> class.
         /// </summary>
-        /// <param name="createdAt">createdAt.</param>
-        /// <param name="updatedAt">updatedAt.</param>
-        /// <param name="id">id.</param>
-        /// <param name="grn">grn.</param>
+        [JsonConstructorAttribute]
+        protected OrderOrderData() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderOrderData" /> class.
+        /// </summary>
         /// <param name="number">number.</param>
-        /// <param name="status">status.</param>
         /// <param name="channel">channel.</param>
         /// <param name="market">market.</param>
-        /// <param name="locale">locale.</param>
+        /// <param name="locale">locale (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
+        /// <param name="documents">documents.</param>
         /// <param name="items">items.</param>
         /// <param name="payments">payments.</param>
         /// <param name="shipments">shipments.</param>
@@ -67,23 +68,21 @@ namespace order.Model
         /// <param name="cartGrn">cartGrn.</param>
         /// <param name="onHold">onHold.</param>
         /// <param name="historyEvents">historyEvents.</param>
-        /// <param name="fulfillments">fulfillments.</param>
         /// <param name="notes">notes.</param>
         /// <param name="isDeleted">this field is used to delete an order in \&quot;soft-delete mode\&quot;. This field must be used from get/list endpoint to exclude these orders..</param>
-        /// <param name="insertedAt">this field is used to save the original created_at order date. The created_at field is used to filter data..</param>
-        /// <param name="deletedAt">deletedAt.</param>
-        public OrderOrderData(DateTime createdAt = default(DateTime), DateTime updatedAt = default(DateTime), string id = default(string), string grn = default(string), string number = default(string), string status = default(string), string channel = default(string), string market = default(string), string locale = default(string), Object additionalInfo = default(Object), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), List<OrderPayment> payments = default(List<OrderPayment>), List<OrderShipment> shipments = default(List<OrderShipment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderDataPromotionInfo> promotions = default(List<OrderDataPromotionInfo>), OrderCurrency? currency = default(OrderCurrency?), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), bool vatIncluded = default(bool), OrderPostalAddress billingAddress = default(OrderPostalAddress), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), string cartGrn = default(string), bool onHold = default(bool), List<OrderDataHistory> historyEvents = default(List<OrderDataHistory>), List<OrderFulfillment> fulfillments = default(List<OrderFulfillment>), string notes = default(string), bool isDeleted = default(bool), DateTime insertedAt = default(DateTime), DateTime deletedAt = default(DateTime))
+        public OrderOrderData(string number = default(string), string channel = default(string), string market = default(string), string locale = default(string), Object additionalInfo = default(Object), List<OrderDataDocument> documents = default(List<OrderDataDocument>), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), List<OrderPayment> payments = default(List<OrderPayment>), List<OrderShipment> shipments = default(List<OrderShipment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderDataPromotionInfo> promotions = default(List<OrderDataPromotionInfo>), OrderCurrency? currency = default(OrderCurrency?), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), bool vatIncluded = default(bool), OrderPostalAddress billingAddress = default(OrderPostalAddress), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), string cartGrn = default(string), bool onHold = default(bool), List<OrderDataHistory> historyEvents = default(List<OrderDataHistory>), string notes = default(string), bool isDeleted = default(bool))
         {
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.Id = id;
-            this.Grn = grn;
+            // to ensure "locale" is required (not null)
+            if (locale == null)
+            {
+                throw new ArgumentNullException("locale is a required property for OrderOrderData and cannot be null");
+            }
+            this.Locale = locale;
             this.Number = number;
-            this.Status = status;
             this.Channel = channel;
             this.Market = market;
-            this.Locale = locale;
             this.AdditionalInfo = additionalInfo;
+            this.Documents = documents;
             this.Items = items;
             this.Payments = payments;
             this.Shipments = shipments;
@@ -100,37 +99,66 @@ namespace order.Model
             this.CartGrn = cartGrn;
             this.OnHold = onHold;
             this.HistoryEvents = historyEvents;
-            this.Fulfillments = fulfillments;
             this.Notes = notes;
             this.IsDeleted = isDeleted;
-            this.InsertedAt = insertedAt;
-            this.DeletedAt = deletedAt;
         }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name = "createdAt", EmitDefaultValue = false)]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as CreatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name = "updatedAt", EmitDefaultValue = false)]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as UpdatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeUpdatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
 
+        /// <summary>
+        /// Returns false as Id should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeId()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Grn
         /// </summary>
         [DataMember(Name = "grn", EmitDefaultValue = false)]
-        public string Grn { get; set; }
+        public string Grn { get; private set; }
 
+        /// <summary>
+        /// Returns false as Grn should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeGrn()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Number
         /// </summary>
@@ -141,8 +169,16 @@ namespace order.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status { get; set; }
+        public string Status { get; private set; }
 
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Channel
         /// </summary>
@@ -158,7 +194,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Locale
         /// </summary>
-        [DataMember(Name = "locale", EmitDefaultValue = false)]
+        [DataMember(Name = "locale", IsRequired = true, EmitDefaultValue = true)]
         public string Locale { get; set; }
 
         /// <summary>
@@ -166,6 +202,12 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "additionalInfo", EmitDefaultValue = false)]
         public Object AdditionalInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Documents
+        /// </summary>
+        [DataMember(Name = "documents", EmitDefaultValue = false)]
+        public List<OrderDataDocument> Documents { get; set; }
 
         /// <summary>
         /// Gets or Sets Items
@@ -261,8 +303,16 @@ namespace order.Model
         /// Gets or Sets Fulfillments
         /// </summary>
         [DataMember(Name = "fulfillments", EmitDefaultValue = false)]
-        public List<OrderFulfillment> Fulfillments { get; set; }
+        public List<OrderFulfillment> Fulfillments { get; private set; }
 
+        /// <summary>
+        /// Returns false as Fulfillments should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeFulfillments()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
@@ -281,14 +331,30 @@ namespace order.Model
         /// </summary>
         /// <value>this field is used to save the original created_at order date. The created_at field is used to filter data.</value>
         [DataMember(Name = "insertedAt", EmitDefaultValue = false)]
-        public DateTime InsertedAt { get; set; }
+        public DateTime InsertedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as InsertedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeInsertedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets DeletedAt
         /// </summary>
         [DataMember(Name = "deletedAt", EmitDefaultValue = false)]
-        public DateTime DeletedAt { get; set; }
+        public DateTime DeletedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as DeletedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeDeletedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -307,6 +373,7 @@ namespace order.Model
             sb.Append("  Market: ").Append(Market).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
+            sb.Append("  Documents: ").Append(Documents).Append("\n");
             sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  Payments: ").Append(Payments).Append("\n");
             sb.Append("  Shipments: ").Append(Shipments).Append("\n");

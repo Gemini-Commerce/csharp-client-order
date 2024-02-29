@@ -35,12 +35,17 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataShipmentInfo" /> class.
         /// </summary>
-        /// <param name="reference">reference.</param>
-        /// <param name="code">code.</param>
+        [JsonConstructorAttribute]
+        protected OrderDataShipmentInfo() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderDataShipmentInfo" /> class.
+        /// </summary>
+        /// <param name="reference">reference (required).</param>
+        /// <param name="code">code (required).</param>
         /// <param name="method">method.</param>
         /// <param name="title">title.</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="amount">amount.</param>
+        /// <param name="amount">amount (required).</param>
         /// <param name="fee">fee.</param>
         /// <param name="vatAmount">vatAmount.</param>
         /// <param name="vatPercentage">vatPercentage.</param>
@@ -51,12 +56,27 @@ namespace order.Model
         /// <param name="returnAddress">returnAddress.</param>
         public OrderDataShipmentInfo(string reference = default(string), string code = default(string), string method = default(string), string title = default(string), string additionalInfo = default(string), OrderMoney amount = default(OrderMoney), OrderMoney fee = default(OrderMoney), OrderMoney vatAmount = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), string grn = default(string), OrderPostalAddress fromAddress = default(OrderPostalAddress), OrderPostalAddress returnAddress = default(OrderPostalAddress))
         {
+            // to ensure "reference" is required (not null)
+            if (reference == null)
+            {
+                throw new ArgumentNullException("reference is a required property for OrderDataShipmentInfo and cannot be null");
+            }
             this.Reference = reference;
+            // to ensure "code" is required (not null)
+            if (code == null)
+            {
+                throw new ArgumentNullException("code is a required property for OrderDataShipmentInfo and cannot be null");
+            }
             this.Code = code;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for OrderDataShipmentInfo and cannot be null");
+            }
+            this.Amount = amount;
             this.Method = method;
             this.Title = title;
             this.AdditionalInfo = additionalInfo;
-            this.Amount = amount;
             this.Fee = fee;
             this.VatAmount = vatAmount;
             this.VatPercentage = vatPercentage;
@@ -70,13 +90,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Reference
         /// </summary>
-        [DataMember(Name = "reference", EmitDefaultValue = false)]
+        [DataMember(Name = "reference", IsRequired = true, EmitDefaultValue = true)]
         public string Reference { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -100,7 +120,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Amount { get; set; }
 
         /// <summary>

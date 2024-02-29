@@ -35,32 +35,52 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateFulfillmentRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="items">items.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreateFulfillmentRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreateFulfillmentRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderId">orderId (required).</param>
+        /// <param name="items">items (required).</param>
         public OrderCreateFulfillmentRequest(string tenantId = default(string), string orderId = default(string), List<OrderFulfillmentItem> items = default(List<OrderFulfillmentItem>))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreateFulfillmentRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderCreateFulfillmentRequest and cannot be null");
+            }
             this.OrderId = orderId;
+            // to ensure "items" is required (not null)
+            if (items == null)
+            {
+                throw new ArgumentNullException("items is a required property for OrderCreateFulfillmentRequest and cannot be null");
+            }
             this.Items = items;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "items", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderFulfillmentItem> Items { get; set; }
 
         /// <summary>

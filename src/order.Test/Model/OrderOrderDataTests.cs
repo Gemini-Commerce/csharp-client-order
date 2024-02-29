@@ -146,6 +146,15 @@ namespace order.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Documents'
+        /// </summary>
+        [Fact]
+        public void DocumentsTest()
+        {
+            // TODO unit test for the property 'Documents'
+        }
+
+        /// <summary>
         /// Test the property 'Items'
         /// </summary>
         [Fact]

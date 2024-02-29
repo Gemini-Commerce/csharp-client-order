@@ -35,9 +35,14 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataPaymentInfo" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
+        [JsonConstructorAttribute]
+        protected OrderDataPaymentInfo() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderDataPaymentInfo" /> class.
+        /// </summary>
+        /// <param name="code">code (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="amount">amount.</param>
+        /// <param name="amount">amount (required).</param>
         /// <param name="fee">fee.</param>
         /// <param name="vatAmount">vatAmount.</param>
         /// <param name="vatPercentage">vatPercentage.</param>
@@ -47,9 +52,19 @@ namespace order.Model
         /// <param name="label">label.</param>
         public OrderDataPaymentInfo(string code = default(string), string additionalInfo = default(string), OrderMoney amount = default(OrderMoney), OrderMoney fee = default(OrderMoney), OrderMoney vatAmount = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), OrderLocalizedText title = default(OrderLocalizedText), OrderLocalizedText label = default(OrderLocalizedText))
         {
+            // to ensure "code" is required (not null)
+            if (code == null)
+            {
+                throw new ArgumentNullException("code is a required property for OrderDataPaymentInfo and cannot be null");
+            }
             this.Code = code;
-            this.AdditionalInfo = additionalInfo;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for OrderDataPaymentInfo and cannot be null");
+            }
             this.Amount = amount;
+            this.AdditionalInfo = additionalInfo;
             this.Fee = fee;
             this.VatAmount = vatAmount;
             this.VatPercentage = vatPercentage;
@@ -62,7 +77,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -74,7 +89,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Amount { get; set; }
 
         /// <summary>

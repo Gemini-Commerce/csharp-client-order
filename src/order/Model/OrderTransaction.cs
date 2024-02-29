@@ -41,15 +41,13 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderTransaction" /> class.
         /// </summary>
-        /// <param name="createdAt">createdAt.</param>
         /// <param name="paymentId">paymentId.</param>
         /// <param name="id">id.</param>
         /// <param name="type">type.</param>
         /// <param name="additionalInfo">additionalInfo.</param>
         /// <param name="childTransactions">childTransactions.</param>
-        public OrderTransaction(DateTime createdAt = default(DateTime), string paymentId = default(string), string id = default(string), OrderTransactionType? type = default(OrderTransactionType?), string additionalInfo = default(string), List<OrderTransaction> childTransactions = default(List<OrderTransaction>))
+        public OrderTransaction(string paymentId = default(string), string id = default(string), OrderTransactionType? type = default(OrderTransactionType?), string additionalInfo = default(string), List<OrderTransaction> childTransactions = default(List<OrderTransaction>))
         {
-            this.CreatedAt = createdAt;
             this.PaymentId = paymentId;
             this.Id = id;
             this.Type = type;
@@ -61,8 +59,16 @@ namespace order.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name = "createdAt", EmitDefaultValue = false)]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as CreatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets PaymentId
         /// </summary>

@@ -35,13 +35,23 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderHoldOrderRequest" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected OrderHoldOrderRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderHoldOrderRequest" /> class.
+        /// </summary>
         /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
+        /// <param name="orderId">orderId (required).</param>
         /// <param name="reason">reason.</param>
         public OrderHoldOrderRequest(string tenantId = default(string), string orderId = default(string), string reason = default(string))
         {
-            this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderHoldOrderRequest and cannot be null");
+            }
             this.OrderId = orderId;
+            this.TenantId = tenantId;
             this.Reason = reason;
         }
 
@@ -54,7 +64,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>

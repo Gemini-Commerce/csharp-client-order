@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt**| **DateTime** |   | [optional]
+**CreatedAt**| **DateTime** |   | [optional] [readonly]
 **PaymentId**| **string** |   | [optional]
 **Id**| **string** |   | [optional]
 **Items**| [**List<OrderRefundItem>**](OrderRefundItem.md) |   | [optional]

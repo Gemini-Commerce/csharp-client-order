@@ -5,6 +5,9 @@ appveyor.yml
 docs/CreateOrderRequestInitialPayment.md
 docs/ImportOrderRequestImportedPayment.md
 docs/InitialPaymentInitialTransaction.md
+docs/ItemProductConfigurationStep.md
+docs/OptionImage.md
+docs/OrderAddDocumentRequest.md
 docs/OrderApi.md
 docs/OrderApproveOrderRequest.md
 docs/OrderAssignShipmentRequest.md
@@ -25,6 +28,7 @@ docs/OrderCreateRefundTransactionRequest.md
 docs/OrderCreateShipmentRequest.md
 docs/OrderCurrency.md
 docs/OrderDataCustomerInfo.md
+docs/OrderDataDocument.md
 docs/OrderDataHistory.md
 docs/OrderDataPaymentInfo.md
 docs/OrderDataPromotionInfo.md
@@ -75,6 +79,7 @@ docs/OrderRefund.md
 docs/OrderRefundAmount.md
 docs/OrderRefundAmountCode.md
 docs/OrderRefundItem.md
+docs/OrderRemoveDocumentByCodeRequest.md
 docs/OrderReportFulfillmentErrorRequest.md
 docs/OrderReportFulfillmentNotResolvableRequest.md
 docs/OrderReportFulfillmentReadyRequest.md
@@ -99,6 +104,7 @@ docs/OrderUpdateOrderRequest.md
 docs/OrderUpdatePaymentRequest.md
 docs/PaymentCcInfo.md
 docs/PrintOrdersLabelsResponseFailedOrder.md
+docs/ProductConfigurationStepOption.md
 docs/ProtobufAny.md
 docs/ProtobufNullValue.md
 docs/RpcStatus.md
@@ -110,6 +116,9 @@ src/order.Test/Api/OrderApiTests.cs
 src/order.Test/Model/CreateOrderRequestInitialPaymentTests.cs
 src/order.Test/Model/ImportOrderRequestImportedPaymentTests.cs
 src/order.Test/Model/InitialPaymentInitialTransactionTests.cs
+src/order.Test/Model/ItemProductConfigurationStepTests.cs
+src/order.Test/Model/OptionImageTests.cs
+src/order.Test/Model/OrderAddDocumentRequestTests.cs
 src/order.Test/Model/OrderApproveOrderRequestTests.cs
 src/order.Test/Model/OrderAssignShipmentRequestTests.cs
 src/order.Test/Model/OrderByDirectionTests.cs
@@ -129,6 +138,7 @@ src/order.Test/Model/OrderCreateRefundTransactionRequestTests.cs
 src/order.Test/Model/OrderCreateShipmentRequestTests.cs
 src/order.Test/Model/OrderCurrencyTests.cs
 src/order.Test/Model/OrderDataCustomerInfoTests.cs
+src/order.Test/Model/OrderDataDocumentTests.cs
 src/order.Test/Model/OrderDataHistoryTests.cs
 src/order.Test/Model/OrderDataPaymentInfoTests.cs
 src/order.Test/Model/OrderDataPromotionInfoTests.cs
@@ -179,6 +189,7 @@ src/order.Test/Model/OrderRefundAmountCodeTests.cs
 src/order.Test/Model/OrderRefundAmountTests.cs
 src/order.Test/Model/OrderRefundItemTests.cs
 src/order.Test/Model/OrderRefundTests.cs
+src/order.Test/Model/OrderRemoveDocumentByCodeRequestTests.cs
 src/order.Test/Model/OrderReportFulfillmentErrorRequestTests.cs
 src/order.Test/Model/OrderReportFulfillmentNotResolvableRequestTests.cs
 src/order.Test/Model/OrderReportFulfillmentReadyRequestTests.cs
@@ -203,6 +214,7 @@ src/order.Test/Model/OrderUpdateOrderRequestTests.cs
 src/order.Test/Model/OrderUpdatePaymentRequestTests.cs
 src/order.Test/Model/PaymentCcInfoTests.cs
 src/order.Test/Model/PrintOrdersLabelsResponseFailedOrderTests.cs
+src/order.Test/Model/ProductConfigurationStepOptionTests.cs
 src/order.Test/Model/ProtobufAnyTests.cs
 src/order.Test/Model/ProtobufNullValueTests.cs
 src/order.Test/Model/RpcStatusTests.cs
@@ -233,6 +245,9 @@ src/order/Model/AbstractOpenAPISchema.cs
 src/order/Model/CreateOrderRequestInitialPayment.cs
 src/order/Model/ImportOrderRequestImportedPayment.cs
 src/order/Model/InitialPaymentInitialTransaction.cs
+src/order/Model/ItemProductConfigurationStep.cs
+src/order/Model/OptionImage.cs
+src/order/Model/OrderAddDocumentRequest.cs
 src/order/Model/OrderApproveOrderRequest.cs
 src/order/Model/OrderAssignShipmentRequest.cs
 src/order/Model/OrderByDirection.cs
@@ -252,6 +267,7 @@ src/order/Model/OrderCreateRefundTransactionRequest.cs
 src/order/Model/OrderCreateShipmentRequest.cs
 src/order/Model/OrderCurrency.cs
 src/order/Model/OrderDataCustomerInfo.cs
+src/order/Model/OrderDataDocument.cs
 src/order/Model/OrderDataHistory.cs
 src/order/Model/OrderDataPaymentInfo.cs
 src/order/Model/OrderDataPromotionInfo.cs
@@ -302,6 +318,7 @@ src/order/Model/OrderRefund.cs
 src/order/Model/OrderRefundAmount.cs
 src/order/Model/OrderRefundAmountCode.cs
 src/order/Model/OrderRefundItem.cs
+src/order/Model/OrderRemoveDocumentByCodeRequest.cs
 src/order/Model/OrderReportFulfillmentErrorRequest.cs
 src/order/Model/OrderReportFulfillmentNotResolvableRequest.cs
 src/order/Model/OrderReportFulfillmentReadyRequest.cs
@@ -326,6 +343,7 @@ src/order/Model/OrderUpdateOrderRequest.cs
 src/order/Model/OrderUpdatePaymentRequest.cs
 src/order/Model/PaymentCcInfo.cs
 src/order/Model/PrintOrdersLabelsResponseFailedOrder.cs
+src/order/Model/ProductConfigurationStepOption.cs
 src/order/Model/ProtobufAny.cs
 src/order/Model/ProtobufNullValue.cs
 src/order/Model/RpcStatus.cs

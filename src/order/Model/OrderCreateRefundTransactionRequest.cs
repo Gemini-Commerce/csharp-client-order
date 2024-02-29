@@ -41,14 +41,29 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateRefundTransactionRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="refundId">refundId.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreateRefundTransactionRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreateRefundTransactionRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="refundId">refundId (required).</param>
         /// <param name="parentTransactionId">parentTransactionId.</param>
         /// <param name="type">type.</param>
         /// <param name="additionalInfo">additionalInfo.</param>
         public OrderCreateRefundTransactionRequest(string tenantId = default(string), string refundId = default(string), string parentTransactionId = default(string), OrderTransactionType? type = default(OrderTransactionType?), string additionalInfo = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreateRefundTransactionRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "refundId" is required (not null)
+            if (refundId == null)
+            {
+                throw new ArgumentNullException("refundId is a required property for OrderCreateRefundTransactionRequest and cannot be null");
+            }
             this.RefundId = refundId;
             this.ParentTransactionId = parentTransactionId;
             this.Type = type;
@@ -58,13 +73,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets RefundId
         /// </summary>
-        [DataMember(Name = "refundId", EmitDefaultValue = false)]
+        [DataMember(Name = "refundId", IsRequired = true, EmitDefaultValue = true)]
         public string RefundId { get; set; }
 
         /// <summary>

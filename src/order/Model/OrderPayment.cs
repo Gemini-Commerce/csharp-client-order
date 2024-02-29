@@ -37,7 +37,7 @@ namespace order.Model
         /// </summary>
         /// <param name="orderId">orderId.</param>
         /// <param name="id">id.</param>
-        /// <param name="code">code.</param>
+        /// <param name="code">payment type stripe, paypal...</param>
         /// <param name="additionalInfo">additionalInfo.</param>
         /// <param name="amounts">amounts.</param>
         /// <param name="ccInfo">ccInfo.</param>
@@ -66,8 +66,9 @@ namespace order.Model
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// payment type stripe, paypal..
         /// </summary>
+        /// <value>payment type stripe, paypal..</value>
         [DataMember(Name = "code", EmitDefaultValue = false)]
         public string Code { get; set; }
 

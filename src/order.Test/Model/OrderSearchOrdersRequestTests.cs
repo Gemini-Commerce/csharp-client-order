@@ -135,5 +135,14 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'PaymentFilter'
         }
+
+        /// <summary>
+        /// Test the property 'AgentGrn'
+        /// </summary>
+        [Fact]
+        public void AgentGrnTest()
+        {
+            // TODO unit test for the property 'AgentGrn'
+        }
     }
 }

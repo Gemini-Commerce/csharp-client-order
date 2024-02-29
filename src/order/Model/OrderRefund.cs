@@ -35,7 +35,6 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderRefund" /> class.
         /// </summary>
-        /// <param name="createdAt">createdAt.</param>
         /// <param name="paymentId">paymentId.</param>
         /// <param name="id">id.</param>
         /// <param name="items">items.</param>
@@ -43,9 +42,8 @@ namespace order.Model
         /// <param name="note">note.</param>
         /// <param name="additionalInfo">additionalInfo.</param>
         /// <param name="transactionIds">transactionIds.</param>
-        public OrderRefund(DateTime createdAt = default(DateTime), string paymentId = default(string), string id = default(string), List<OrderRefundItem> items = default(List<OrderRefundItem>), List<OrderRefundAmount> amounts = default(List<OrderRefundAmount>), string note = default(string), string additionalInfo = default(string), List<string> transactionIds = default(List<string>))
+        public OrderRefund(string paymentId = default(string), string id = default(string), List<OrderRefundItem> items = default(List<OrderRefundItem>), List<OrderRefundAmount> amounts = default(List<OrderRefundAmount>), string note = default(string), string additionalInfo = default(string), List<string> transactionIds = default(List<string>))
         {
-            this.CreatedAt = createdAt;
             this.PaymentId = paymentId;
             this.Id = id;
             this.Items = items;
@@ -59,8 +57,16 @@ namespace order.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name = "createdAt", EmitDefaultValue = false)]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as CreatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets PaymentId
         /// </summary>

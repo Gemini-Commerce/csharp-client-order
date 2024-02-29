@@ -35,13 +35,28 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderListOrdersByNumbersRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="numbers">numbers.</param>
+        [JsonConstructorAttribute]
+        protected OrderListOrdersByNumbersRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderListOrdersByNumbersRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="numbers">numbers (required).</param>
         /// <param name="pageSize">The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100..</param>
         /// <param name="pageToken">A page token, received from a previous &#x60;ListOrders&#x60; call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to &#x60;ListOrders&#x60; must match the call that provided the page token..</param>
         public OrderListOrdersByNumbersRequest(string tenantId = default(string), List<string> numbers = default(List<string>), long pageSize = default(long), string pageToken = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderListOrdersByNumbersRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "numbers" is required (not null)
+            if (numbers == null)
+            {
+                throw new ArgumentNullException("numbers is a required property for OrderListOrdersByNumbersRequest and cannot be null");
+            }
             this.Numbers = numbers;
             this.PageSize = pageSize;
             this.PageToken = pageToken;
@@ -50,13 +65,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets Numbers
         /// </summary>
-        [DataMember(Name = "numbers", EmitDefaultValue = false)]
+        [DataMember(Name = "numbers", IsRequired = true, EmitDefaultValue = true)]
         public List<string> Numbers { get; set; }
 
         /// <summary>

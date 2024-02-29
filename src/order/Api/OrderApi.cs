@@ -16,6 +16,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using order.Client;
+using order.Client.Auth;
 using order.Model;
 
 namespace order.Api
@@ -627,6 +628,46 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of OrderListShipmentsResponse</returns>
         ApiResponse<OrderListShipmentsResponse> ListShipmentsWithHttpInfo(OrderListShipmentsRequest body, int operationIndex = 0);
+        /// <summary>
+        /// Documents
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object OrderAddDocument(OrderAddDocumentRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// Documents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OrderAddDocumentWithHttpInfo(OrderAddDocumentRequest body, int operationIndex = 0);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        Object OrderRemoveDocumentByCode(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> OrderRemoveDocumentByCodeWithHttpInfo(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0);
         /// <summary>
         /// Print Orders Labels
         /// </summary>
@@ -1767,6 +1808,56 @@ namespace order.Api
         /// <returns>Task of ApiResponse (OrderListShipmentsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrderListShipmentsResponse>> ListShipmentsWithHttpInfoAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Documents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Documents
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Print Orders Labels
         /// </summary>
         /// <remarks>
@@ -2417,6 +2508,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ApproveOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ApproveOrder", localVarRequestOptions, this.Configuration);
@@ -2491,6 +2587,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ApproveOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ApproveOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -2563,6 +2664,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.AssignShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/AssignShipment", localVarRequestOptions, this.Configuration);
@@ -2637,6 +2743,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.AssignShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/AssignShipment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -2709,6 +2820,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CalculateRefund";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderCalculateRefundResponse>("/order.Order/CalculateRefund", localVarRequestOptions, this.Configuration);
@@ -2783,6 +2899,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CalculateRefund";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderCalculateRefundResponse>("/order.Order/CalculateRefund", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -2855,6 +2976,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/CancelFulfillment", localVarRequestOptions, this.Configuration);
@@ -2929,6 +3055,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/CancelFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3001,6 +3132,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/CancelOrder", localVarRequestOptions, this.Configuration);
@@ -3075,6 +3211,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/CancelOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3147,6 +3288,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/CancelShipment", localVarRequestOptions, this.Configuration);
@@ -3221,6 +3367,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CancelShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/CancelShipment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3293,6 +3444,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CompleteShipmentPacking";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/CompleteShipmentPacking", localVarRequestOptions, this.Configuration);
@@ -3367,6 +3523,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CompleteShipmentPacking";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/CompleteShipmentPacking", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3439,6 +3600,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderFulfillment>("/order.Order/CreateFulfillment", localVarRequestOptions, this.Configuration);
@@ -3513,6 +3679,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderFulfillment>("/order.Order/CreateFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3585,6 +3756,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/CreateOrder", localVarRequestOptions, this.Configuration);
@@ -3659,6 +3835,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/CreateOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3731,6 +3912,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateOrderHistory";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderDataHistory>("/order.Order/CreateHistory", localVarRequestOptions, this.Configuration);
@@ -3805,6 +3991,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateOrderHistory";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderDataHistory>("/order.Order/CreateHistory", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -3877,6 +4068,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderPayment>("/order.Order/CreatePayment", localVarRequestOptions, this.Configuration);
@@ -3951,6 +4147,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderPayment>("/order.Order/CreatePayment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4023,6 +4224,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreatePaymentTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderTransaction>("/order.Order/CreatePaymentTransaction", localVarRequestOptions, this.Configuration);
@@ -4097,6 +4303,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreatePaymentTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderTransaction>("/order.Order/CreatePaymentTransaction", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4169,6 +4380,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateRefund";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderRefund>("/order.Order/CreateRefund", localVarRequestOptions, this.Configuration);
@@ -4243,6 +4459,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateRefund";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderRefund>("/order.Order/CreateRefund", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4315,6 +4536,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateRefundTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderTransaction>("/order.Order/CreateRefundTransaction", localVarRequestOptions, this.Configuration);
@@ -4389,6 +4615,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateRefundTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderTransaction>("/order.Order/CreateRefundTransaction", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4461,6 +4692,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderShipment>("/order.Order/CreateShipment", localVarRequestOptions, this.Configuration);
@@ -4535,6 +4771,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.CreateShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderShipment>("/order.Order/CreateShipment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4607,6 +4848,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.DeleteOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/DeleteOrder", localVarRequestOptions, this.Configuration);
@@ -4681,6 +4927,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.DeleteOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/DeleteOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4753,6 +5004,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderFulfillment>("/order.Order/GetFulfillment", localVarRequestOptions, this.Configuration);
@@ -4827,6 +5083,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderFulfillment>("/order.Order/GetFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -4899,6 +5160,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/GetOrder", localVarRequestOptions, this.Configuration);
@@ -4973,6 +5239,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/GetOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5045,6 +5316,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrderByCartId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/GetOrderByCartId", localVarRequestOptions, this.Configuration);
@@ -5119,6 +5395,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrderByCartId";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/GetOrderByCartId", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5191,6 +5472,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrderByOrderNumber";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/GetOrderByOrderNumber", localVarRequestOptions, this.Configuration);
@@ -5265,6 +5551,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetOrderByOrderNumber";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/GetOrderByOrderNumber", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5337,6 +5628,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderPayment>("/order.Order/GetPayment", localVarRequestOptions, this.Configuration);
@@ -5411,6 +5707,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetPayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderPayment>("/order.Order/GetPayment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5483,6 +5784,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderShipment>("/order.Order/GetShipment", localVarRequestOptions, this.Configuration);
@@ -5557,6 +5863,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderShipment>("/order.Order/GetShipment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5629,6 +5940,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderTransaction>("/order.Order/GetTransaction", localVarRequestOptions, this.Configuration);
@@ -5703,6 +6019,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.GetTransaction";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderTransaction>("/order.Order/GetTransaction", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5775,6 +6096,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.HoldOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/HoldOrder", localVarRequestOptions, this.Configuration);
@@ -5849,6 +6175,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.HoldOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/HoldOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -5921,6 +6252,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ImportOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/ImportOrder", localVarRequestOptions, this.Configuration);
@@ -5995,6 +6331,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ImportOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/ImportOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6067,6 +6408,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListFulfillments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderListFulfillmentsResponse>("/order.Order/ListFulfillments", localVarRequestOptions, this.Configuration);
@@ -6141,6 +6487,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListFulfillments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderListFulfillmentsResponse>("/order.Order/ListFulfillments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6213,6 +6564,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrders";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderListOrdersResponse>("/order.Order/ListOrders", localVarRequestOptions, this.Configuration);
@@ -6287,6 +6643,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrders";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderListOrdersResponse>("/order.Order/ListOrders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6359,6 +6720,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrdersByCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderListOrdersByCustomerResponse>("/order.Order/ListOrdersByCustomer", localVarRequestOptions, this.Configuration);
@@ -6433,6 +6799,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrdersByCustomer";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderListOrdersByCustomerResponse>("/order.Order/ListOrdersByCustomer", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6505,6 +6876,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrdersByNumbers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderListOrdersByNumbersResponse>("/order.Order/ListOrdersByNumbers", localVarRequestOptions, this.Configuration);
@@ -6579,6 +6955,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListOrdersByNumbers";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderListOrdersByNumbersResponse>("/order.Order/ListOrdersByNumbers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6651,6 +7032,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListShipments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderListShipmentsResponse>("/order.Order/ListShipments", localVarRequestOptions, this.Configuration);
@@ -6725,6 +7111,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ListShipments";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderListShipmentsResponse>("/order.Order/ListShipments", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6732,6 +7123,318 @@ namespace order.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListShipments", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Documents 
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object OrderAddDocument(OrderAddDocumentRequest body, int operationIndex = 0)
+        {
+            order.Client.ApiResponse<Object> localVarResponse = OrderAddDocumentWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Documents 
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public order.Client.ApiResponse<Object> OrderAddDocumentWithHttpInfo(OrderAddDocumentRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new order.Client.ApiException(400, "Missing required parameter 'body' when calling OrderApi->OrderAddDocument");
+            }
+
+            order.Client.RequestOptions localVarRequestOptions = new order.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = order.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = order.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderAddDocument";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/order.Order/AddDocument", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderAddDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Documents 
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            order.Client.ApiResponse<Object> localVarResponse = await OrderAddDocumentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Documents 
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new order.Client.ApiException(400, "Missing required parameter 'body' when calling OrderApi->OrderAddDocument");
+            }
+
+
+            order.Client.RequestOptions localVarRequestOptions = new order.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = order.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = order.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderAddDocument";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/AddDocument", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderAddDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>Object</returns>
+        public Object OrderRemoveDocumentByCode(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0)
+        {
+            order.Client.ApiResponse<Object> localVarResponse = OrderRemoveDocumentByCodeWithHttpInfo(body);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public order.Client.ApiResponse<Object> OrderRemoveDocumentByCodeWithHttpInfo(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new order.Client.ApiException(400, "Missing required parameter 'body' when calling OrderApi->OrderRemoveDocumentByCode");
+            }
+
+            order.Client.RequestOptions localVarRequestOptions = new order.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = order.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = order.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderRemoveDocumentByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/order.Order/RemoveDocumentByCode", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderRemoveDocumentByCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            order.Client.ApiResponse<Object> localVarResponse = await OrderRemoveDocumentByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="order.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+            {
+                throw new order.Client.ApiException(400, "Missing required parameter 'body' when calling OrderApi->OrderRemoveDocumentByCode");
+            }
+
+
+            order.Client.RequestOptions localVarRequestOptions = new order.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = order.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = order.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = body;
+
+            localVarRequestOptions.Operation = "OrderApi.OrderRemoveDocumentByCode";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/RemoveDocumentByCode", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("OrderRemoveDocumentByCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -6797,6 +7500,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.PrintOrdersLabels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderPrintOrdersLabelsResponse>("/order.Order/PrintOrdersLabels", localVarRequestOptions, this.Configuration);
@@ -6871,6 +7579,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.PrintOrdersLabels";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderPrintOrdersLabelsResponse>("/order.Order/PrintOrdersLabels", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -6943,6 +7656,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.QuashFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/QuashFulfillment", localVarRequestOptions, this.Configuration);
@@ -7017,6 +7735,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.QuashFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/QuashFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7089,6 +7812,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.QuashShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/QuashShipment", localVarRequestOptions, this.Configuration);
@@ -7163,6 +7891,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.QuashShipment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/QuashShipment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7235,6 +7968,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReceiveFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReceiveFulfillment", localVarRequestOptions, this.Configuration);
@@ -7309,6 +8047,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReceiveFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReceiveFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7381,6 +8124,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentError";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReportFulfillmentError", localVarRequestOptions, this.Configuration);
@@ -7455,6 +8203,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentError";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReportFulfillmentError", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7527,6 +8280,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentNotResolvable";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReportFulfillmentNotResolvable", localVarRequestOptions, this.Configuration);
@@ -7601,6 +8359,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentNotResolvable";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReportFulfillmentNotResolvable", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7673,6 +8436,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentReady";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReportFulfillmentReady", localVarRequestOptions, this.Configuration);
@@ -7747,6 +8515,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportFulfillmentReady";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReportFulfillmentReady", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7819,6 +8592,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportShipmentDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReportShipmentDelivery", localVarRequestOptions, this.Configuration);
@@ -7893,6 +8671,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportShipmentDelivery";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReportShipmentDelivery", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -7965,6 +8748,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportShipmentMissingStock";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ReportShipmentMissingStock", localVarRequestOptions, this.Configuration);
@@ -8039,6 +8827,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ReportShipmentMissingStock";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ReportShipmentMissingStock", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8111,6 +8904,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ResolveShipmentMissingStock";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/ResolveShipmentMissingStock", localVarRequestOptions, this.Configuration);
@@ -8185,6 +8983,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.ResolveShipmentMissingStock";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/ResolveShipmentMissingStock", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8257,6 +9060,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.RetryFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/RetryFulfillment", localVarRequestOptions, this.Configuration);
@@ -8331,6 +9139,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.RetryFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/RetryFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8403,6 +9216,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SearchOrders";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderSearchOrdersResponse>("/order.Order/SearchOrders", localVarRequestOptions, this.Configuration);
@@ -8477,6 +9295,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SearchOrders";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderSearchOrdersResponse>("/order.Order/SearchOrders", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8549,6 +9372,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SendFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/SendFulfillment", localVarRequestOptions, this.Configuration);
@@ -8623,6 +9451,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SendFulfillment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/SendFulfillment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8695,6 +9528,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SendOrderNotification";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/SendOrderNotification", localVarRequestOptions, this.Configuration);
@@ -8769,6 +9607,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.SendOrderNotification";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/SendOrderNotification", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8841,6 +9684,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.StartFulfillmentProcessing";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/StartFulfillmentProcessing", localVarRequestOptions, this.Configuration);
@@ -8915,6 +9763,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.StartFulfillmentProcessing";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/StartFulfillmentProcessing", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -8987,6 +9840,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.StartShipmentProcessing";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/StartShipmentProcessing", localVarRequestOptions, this.Configuration);
@@ -9061,6 +9919,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.StartShipmentProcessing";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/StartShipmentProcessing", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -9133,6 +9996,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UnholdOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<Object>("/order.Order/UnholdOrder", localVarRequestOptions, this.Configuration);
@@ -9207,6 +10075,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UnholdOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/order.Order/UnholdOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -9279,6 +10152,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UpdateOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderOrderData>("/order.Order/UpdateOrder", localVarRequestOptions, this.Configuration);
@@ -9353,6 +10231,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UpdateOrder";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderOrderData>("/order.Order/UpdateOrder", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
@@ -9425,6 +10308,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UpdatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<OrderPayment>("/order.Order/UpdatePayment", localVarRequestOptions, this.Configuration);
@@ -9499,6 +10387,11 @@ namespace order.Api
             localVarRequestOptions.Operation = "OrderApi.UpdatePayment";
             localVarRequestOptions.OperationIndex = operationIndex;
 
+            // authentication (Authorization) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
 
             // make the HTTP request
             var localVarResponse = await this.AsynchronousClient.PostAsync<OrderPayment>("/order.Order/UpdatePayment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);

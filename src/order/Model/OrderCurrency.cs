@@ -27,8 +27,9 @@ using OpenAPIDateConverter = order.Client.OpenAPIDateConverter;
 namespace order.Model
 {
     /// <summary>
-    /// Defines orderCurrency
+    /// Stands for Albania, not all ;-)
     /// </summary>
+    /// <value>Stands for Albania, not all ;-)</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum OrderCurrency
     {

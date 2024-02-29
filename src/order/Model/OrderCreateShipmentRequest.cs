@@ -35,22 +35,51 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateShipmentRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="items">items.</param>
-        /// <param name="address">address.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreateShipmentRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreateShipmentRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderId">orderId (required).</param>
+        /// <param name="items">items (required).</param>
+        /// <param name="address">address (required).</param>
         /// <param name="fromAddress">fromAddress.</param>
         /// <param name="returnAddress">returnAddress.</param>
+        /// <param name="tracking">tracking.</param>
+        /// <param name="returnTracking">returnTracking.</param>
         /// <param name="code">code.</param>
         /// <param name="method">method.</param>
-        public OrderCreateShipmentRequest(string tenantId = default(string), string orderId = default(string), List<OrderShipmentItem> items = default(List<OrderShipmentItem>), OrderPostalAddress address = default(OrderPostalAddress), OrderPostalAddress fromAddress = default(OrderPostalAddress), OrderPostalAddress returnAddress = default(OrderPostalAddress), string code = default(string), string method = default(string))
+        public OrderCreateShipmentRequest(string tenantId = default(string), string orderId = default(string), List<OrderShipmentItem> items = default(List<OrderShipmentItem>), OrderPostalAddress address = default(OrderPostalAddress), OrderPostalAddress fromAddress = default(OrderPostalAddress), OrderPostalAddress returnAddress = default(OrderPostalAddress), List<ShipmentTracking> tracking = default(List<ShipmentTracking>), List<ShipmentTracking> returnTracking = default(List<ShipmentTracking>), string code = default(string), string method = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreateShipmentRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderCreateShipmentRequest and cannot be null");
+            }
             this.OrderId = orderId;
+            // to ensure "items" is required (not null)
+            if (items == null)
+            {
+                throw new ArgumentNullException("items is a required property for OrderCreateShipmentRequest and cannot be null");
+            }
             this.Items = items;
+            // to ensure "address" is required (not null)
+            if (address == null)
+            {
+                throw new ArgumentNullException("address is a required property for OrderCreateShipmentRequest and cannot be null");
+            }
             this.Address = address;
             this.FromAddress = fromAddress;
             this.ReturnAddress = returnAddress;
+            this.Tracking = tracking;
+            this.ReturnTracking = returnTracking;
             this.Code = code;
             this.Method = method;
         }
@@ -58,25 +87,25 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "items", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderShipmentItem> Items { get; set; }
 
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name = "address", EmitDefaultValue = false)]
+        [DataMember(Name = "address", IsRequired = true, EmitDefaultValue = true)]
         public OrderPostalAddress Address { get; set; }
 
         /// <summary>
@@ -90,6 +119,18 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "returnAddress", EmitDefaultValue = false)]
         public OrderPostalAddress ReturnAddress { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Tracking
+        /// </summary>
+        [DataMember(Name = "tracking", EmitDefaultValue = false)]
+        public List<ShipmentTracking> Tracking { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ReturnTracking
+        /// </summary>
+        [DataMember(Name = "returnTracking", EmitDefaultValue = false)]
+        public List<ShipmentTracking> ReturnTracking { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
@@ -117,6 +158,8 @@ namespace order.Model
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
             sb.Append("  ReturnAddress: ").Append(ReturnAddress).Append("\n");
+            sb.Append("  Tracking: ").Append(Tracking).Append("\n");
+            sb.Append("  ReturnTracking: ").Append(ReturnTracking).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Method: ").Append(Method).Append("\n");
             sb.Append("}\n");

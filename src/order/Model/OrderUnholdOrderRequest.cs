@@ -35,24 +35,39 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderUnholdOrderRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
+        [JsonConstructorAttribute]
+        protected OrderUnholdOrderRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderUnholdOrderRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderId">orderId (required).</param>
         public OrderUnholdOrderRequest(string tenantId = default(string), string orderId = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderUnholdOrderRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderUnholdOrderRequest and cannot be null");
+            }
             this.OrderId = orderId;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>

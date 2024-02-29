@@ -35,16 +35,12 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderFulfillment" /> class.
         /// </summary>
-        /// <param name="createdAt">createdAt.</param>
-        /// <param name="updatedAt">updatedAt.</param>
         /// <param name="orderId">orderId.</param>
         /// <param name="id">id.</param>
         /// <param name="status">status.</param>
         /// <param name="items">items.</param>
-        public OrderFulfillment(DateTime createdAt = default(DateTime), DateTime updatedAt = default(DateTime), string orderId = default(string), string id = default(string), string status = default(string), List<OrderFulfillmentItem> items = default(List<OrderFulfillmentItem>))
+        public OrderFulfillment(string orderId = default(string), string id = default(string), string status = default(string), List<OrderFulfillmentItem> items = default(List<OrderFulfillmentItem>))
         {
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.OrderId = orderId;
             this.Id = id;
             this.Status = status;
@@ -55,14 +51,30 @@ namespace order.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name = "createdAt", EmitDefaultValue = false)]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as CreatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
         [DataMember(Name = "updatedAt", EmitDefaultValue = false)]
-        public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as UpdatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeUpdatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>

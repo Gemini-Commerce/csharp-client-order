@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt**| **DateTime** |   | [optional]
+**CreatedAt**| **DateTime** |   | [optional] [readonly]
 **PaymentId**| **string** |   | [optional]
 **Id**| **string** |   | [optional]
 **Type**| **OrderTransactionType** |  for more information please, see Model/OrderTransactionType.php  | [optional]

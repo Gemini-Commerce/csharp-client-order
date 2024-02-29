@@ -135,5 +135,41 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'TaxCode'
         }
+
+        /// <summary>
+        /// Test the property 'SdiCode'
+        /// </summary>
+        [Fact]
+        public void SdiCodeTest()
+        {
+            // TODO unit test for the property 'SdiCode'
+        }
+
+        /// <summary>
+        /// Test the property 'FiscalCode'
+        /// </summary>
+        [Fact]
+        public void FiscalCodeTest()
+        {
+            // TODO unit test for the property 'FiscalCode'
+        }
+
+        /// <summary>
+        /// Test the property 'CompanyName'
+        /// </summary>
+        [Fact]
+        public void CompanyNameTest()
+        {
+            // TODO unit test for the property 'CompanyName'
+        }
+
+        /// <summary>
+        /// Test the property 'AgentGrn'
+        /// </summary>
+        [Fact]
+        public void AgentGrnTest()
+        {
+            // TODO unit test for the property 'AgentGrn'
+        }
     }
 }

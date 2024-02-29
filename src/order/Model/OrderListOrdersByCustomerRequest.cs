@@ -35,28 +35,45 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderListOrdersByCustomerRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="customerGrn">customerGrn.</param>
+        [JsonConstructorAttribute]
+        protected OrderListOrdersByCustomerRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderListOrdersByCustomerRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="customerGrn">customerGrn (required).</param>
         /// <param name="pageSize">The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100..</param>
         /// <param name="pageToken">A page token, received from a previous &#x60;ListOrders&#x60; call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to &#x60;ListOrders&#x60; must match the call that provided the page token..</param>
-        public OrderListOrdersByCustomerRequest(string tenantId = default(string), string customerGrn = default(string), long pageSize = default(long), string pageToken = default(string))
+        /// <param name="orderBy">orderBy.</param>
+        public OrderListOrdersByCustomerRequest(string tenantId = default(string), string customerGrn = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderListOrdersByCustomerRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "customerGrn" is required (not null)
+            if (customerGrn == null)
+            {
+                throw new ArgumentNullException("customerGrn is a required property for OrderListOrdersByCustomerRequest and cannot be null");
+            }
             this.CustomerGrn = customerGrn;
             this.PageSize = pageSize;
             this.PageToken = pageToken;
+            this.OrderBy = orderBy;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerGrn
         /// </summary>
-        [DataMember(Name = "customerGrn", EmitDefaultValue = false)]
+        [DataMember(Name = "customerGrn", IsRequired = true, EmitDefaultValue = true)]
         public string CustomerGrn { get; set; }
 
         /// <summary>
@@ -74,6 +91,12 @@ namespace order.Model
         public string PageToken { get; set; }
 
         /// <summary>
+        /// Gets or Sets OrderBy
+        /// </summary>
+        [DataMember(Name = "orderBy", EmitDefaultValue = false)]
+        public List<OrderOrderBy> OrderBy { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +108,7 @@ namespace order.Model
             sb.Append("  CustomerGrn: ").Append(CustomerGrn).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageToken: ").Append(PageToken).Append("\n");
+            sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

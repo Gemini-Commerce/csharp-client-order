@@ -6,8 +6,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt**| **DateTime** |   | [optional]
-**Status**| **string** |   | [optional]
+**CreatedAt**| **DateTime** |   | [optional] [readonly]
+**Status**| **string** |   | [optional] [readonly]
 **Comment**| **string** |   | [optional]
 
 

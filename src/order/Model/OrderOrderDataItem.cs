@@ -48,6 +48,8 @@ namespace order.Model
         /// <param name="rowVatAmount">rowVatAmount.</param>
         /// <param name="discountAmount">discountAmount.</param>
         /// <param name="rowBasePrice">rowBasePrice.</param>
+        /// <param name="unitCustomPrice">unitCustomPrice.</param>
+        /// <param name="rowCustomPrice">rowCustomPrice.</param>
         /// <param name="vatPercentage">vatPercentage.</param>
         /// <param name="vatInaccurate">vatInaccurate.</param>
         /// <param name="vatCalculated">vatCalculated.</param>
@@ -60,7 +62,8 @@ namespace order.Model
         /// <param name="shipmentInfoReference">shipmentInfoReference.</param>
         /// <param name="promotionGrn">promotionGrn.</param>
         /// <param name="productIsVirtual">productIsVirtual.</param>
-        public OrderOrderDataItem(string id = default(string), string productGrn = default(string), long qtyOrdered = default(long), long qtyCommitted = default(long), OrderMoney unitSalePrice = default(OrderMoney), OrderMoney unitListPrice = default(OrderMoney), OrderMoney unitBasePrice = default(OrderMoney), OrderMoney unitVatAmount = default(OrderMoney), OrderMoney rowSalePrice = default(OrderMoney), OrderMoney rowListPrice = default(OrderMoney), OrderMoney rowVatAmount = default(OrderMoney), OrderMoney discountAmount = default(OrderMoney), OrderMoney rowBasePrice = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), string productName = default(string), string productCode = default(string), string productSku = default(string), string productOptions = default(string), string productImg = default(string), string productData = default(string), string shipmentInfoReference = default(string), List<string> promotionGrn = default(List<string>), bool productIsVirtual = default(bool))
+        /// <param name="productConfiguration">productConfiguration.</param>
+        public OrderOrderDataItem(string id = default(string), string productGrn = default(string), long qtyOrdered = default(long), long qtyCommitted = default(long), OrderMoney unitSalePrice = default(OrderMoney), OrderMoney unitListPrice = default(OrderMoney), OrderMoney unitBasePrice = default(OrderMoney), OrderMoney unitVatAmount = default(OrderMoney), OrderMoney rowSalePrice = default(OrderMoney), OrderMoney rowListPrice = default(OrderMoney), OrderMoney rowVatAmount = default(OrderMoney), OrderMoney discountAmount = default(OrderMoney), OrderMoney rowBasePrice = default(OrderMoney), OrderMoney unitCustomPrice = default(OrderMoney), OrderMoney rowCustomPrice = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), string productName = default(string), string productCode = default(string), string productSku = default(string), string productOptions = default(string), string productImg = default(string), string productData = default(string), string shipmentInfoReference = default(string), List<string> promotionGrn = default(List<string>), bool productIsVirtual = default(bool), List<ItemProductConfigurationStep> productConfiguration = default(List<ItemProductConfigurationStep>))
         {
             this.Id = id;
             this.ProductGrn = productGrn;
@@ -75,6 +78,8 @@ namespace order.Model
             this.RowVatAmount = rowVatAmount;
             this.DiscountAmount = discountAmount;
             this.RowBasePrice = rowBasePrice;
+            this.UnitCustomPrice = unitCustomPrice;
+            this.RowCustomPrice = rowCustomPrice;
             this.VatPercentage = vatPercentage;
             this.VatInaccurate = vatInaccurate;
             this.VatCalculated = vatCalculated;
@@ -87,6 +92,7 @@ namespace order.Model
             this.ShipmentInfoReference = shipmentInfoReference;
             this.PromotionGrn = promotionGrn;
             this.ProductIsVirtual = productIsVirtual;
+            this.ProductConfiguration = productConfiguration;
         }
 
         /// <summary>
@@ -168,6 +174,18 @@ namespace order.Model
         public OrderMoney RowBasePrice { get; set; }
 
         /// <summary>
+        /// Gets or Sets UnitCustomPrice
+        /// </summary>
+        [DataMember(Name = "unitCustomPrice", EmitDefaultValue = false)]
+        public OrderMoney UnitCustomPrice { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RowCustomPrice
+        /// </summary>
+        [DataMember(Name = "rowCustomPrice", EmitDefaultValue = false)]
+        public OrderMoney RowCustomPrice { get; set; }
+
+        /// <summary>
         /// Gets or Sets VatPercentage
         /// </summary>
         [DataMember(Name = "vatPercentage", EmitDefaultValue = false)]
@@ -240,6 +258,12 @@ namespace order.Model
         public bool ProductIsVirtual { get; set; }
 
         /// <summary>
+        /// Gets or Sets ProductConfiguration
+        /// </summary>
+        [DataMember(Name = "productConfiguration", EmitDefaultValue = false)]
+        public List<ItemProductConfigurationStep> ProductConfiguration { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -260,6 +284,8 @@ namespace order.Model
             sb.Append("  RowVatAmount: ").Append(RowVatAmount).Append("\n");
             sb.Append("  DiscountAmount: ").Append(DiscountAmount).Append("\n");
             sb.Append("  RowBasePrice: ").Append(RowBasePrice).Append("\n");
+            sb.Append("  UnitCustomPrice: ").Append(UnitCustomPrice).Append("\n");
+            sb.Append("  RowCustomPrice: ").Append(RowCustomPrice).Append("\n");
             sb.Append("  VatPercentage: ").Append(VatPercentage).Append("\n");
             sb.Append("  VatInaccurate: ").Append(VatInaccurate).Append("\n");
             sb.Append("  VatCalculated: ").Append(VatCalculated).Append("\n");
@@ -272,6 +298,7 @@ namespace order.Model
             sb.Append("  ShipmentInfoReference: ").Append(ShipmentInfoReference).Append("\n");
             sb.Append("  PromotionGrn: ").Append(PromotionGrn).Append("\n");
             sb.Append("  ProductIsVirtual: ").Append(ProductIsVirtual).Append("\n");
+            sb.Append("  ProductConfiguration: ").Append(ProductConfiguration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

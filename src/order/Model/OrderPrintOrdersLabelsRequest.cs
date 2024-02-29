@@ -35,24 +35,39 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderPrintOrdersLabelsRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderNumbers">orderNumbers.</param>
+        [JsonConstructorAttribute]
+        protected OrderPrintOrdersLabelsRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderPrintOrdersLabelsRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderNumbers">orderNumbers (required).</param>
         public OrderPrintOrdersLabelsRequest(string tenantId = default(string), List<string> orderNumbers = default(List<string>))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderPrintOrdersLabelsRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderNumbers" is required (not null)
+            if (orderNumbers == null)
+            {
+                throw new ArgumentNullException("orderNumbers is a required property for OrderPrintOrdersLabelsRequest and cannot be null");
+            }
             this.OrderNumbers = orderNumbers;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderNumbers
         /// </summary>
-        [DataMember(Name = "orderNumbers", EmitDefaultValue = false)]
+        [DataMember(Name = "orderNumbers", IsRequired = true, EmitDefaultValue = true)]
         public List<string> OrderNumbers { get; set; }
 
         /// <summary>

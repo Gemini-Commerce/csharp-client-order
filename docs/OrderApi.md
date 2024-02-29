@@ -34,6 +34,8 @@ All URIs are relative to *https://dom.api.gogemini.io*
 | [**ListOrdersByCustomer**](OrderApi.md#listordersbycustomer) | **POST** /order.Order/ListOrdersByCustomer | List Orders by Customer |
 | [**ListOrdersByNumbers**](OrderApi.md#listordersbynumbers) | **POST** /order.Order/ListOrdersByNumbers | List Orders by Numbers |
 | [**ListShipments**](OrderApi.md#listshipments) | **POST** /order.Order/ListShipments | List Shipments |
+| [**OrderAddDocument**](OrderApi.md#orderadddocument) | **POST** /order.Order/AddDocument | Documents |
+| [**OrderRemoveDocumentByCode**](OrderApi.md#orderremovedocumentbycode) | **POST** /order.Order/RemoveDocumentByCode |  |
 | [**PrintOrdersLabels**](OrderApi.md#printorderslabels) | **POST** /order.Order/PrintOrdersLabels | Print Orders Labels |
 | [**QuashFulfillment**](OrderApi.md#quashfulfillment) | **POST** /order.Order/QuashFulfillment | Quash Fulfillment |
 | [**QuashShipment**](OrderApi.md#quashshipment) | **POST** /order.Order/QuashShipment | Quash Shipment |
@@ -76,6 +78,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderApproveOrderRequest(); // OrderApproveOrderRequest | 
@@ -129,7 +135,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -169,6 +175,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderAssignShipmentRequest(); // OrderAssignShipmentRequest | 
@@ -222,7 +232,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -262,6 +272,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCalculateRefundRequest(); // OrderCalculateRefundRequest | 
@@ -315,7 +329,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -355,6 +369,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCancelFulfillmentRequest(); // OrderCancelFulfillmentRequest | 
@@ -408,7 +426,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -448,6 +466,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCancelOrderRequest(); // OrderCancelOrderRequest | 
@@ -501,7 +523,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -541,6 +563,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCancelShipmentRequest(); // OrderCancelShipmentRequest | 
@@ -594,7 +620,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -634,6 +660,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCompleteShipmentPackingRequest(); // OrderCompleteShipmentPackingRequest | 
@@ -687,7 +717,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -727,6 +757,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateFulfillmentRequest(); // OrderCreateFulfillmentRequest | 
@@ -780,7 +814,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -820,6 +854,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateOrderRequest(); // OrderCreateOrderRequest | 
@@ -873,7 +911,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -913,6 +951,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateHistoryRequest(); // OrderCreateHistoryRequest | 
@@ -966,7 +1008,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1006,6 +1048,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreatePaymentRequest(); // OrderCreatePaymentRequest | 
@@ -1059,7 +1105,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1099,6 +1145,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreatePaymentTransactionRequest(); // OrderCreatePaymentTransactionRequest | 
@@ -1152,7 +1202,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1192,6 +1242,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateRefundRequest(); // OrderCreateRefundRequest | 
@@ -1245,7 +1299,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1285,6 +1339,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateRefundTransactionRequest(); // OrderCreateRefundTransactionRequest | 
@@ -1338,7 +1396,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1378,6 +1436,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderCreateShipmentRequest(); // OrderCreateShipmentRequest | 
@@ -1431,7 +1493,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1471,6 +1533,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderDeleteOrderRequest(); // OrderDeleteOrderRequest | 
@@ -1524,7 +1590,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1564,6 +1630,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetFulfillmentRequest(); // OrderGetFulfillmentRequest | 
@@ -1617,7 +1687,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1657,6 +1727,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetOrderRequest(); // OrderGetOrderRequest | 
@@ -1710,7 +1784,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1750,6 +1824,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetOrderByCartIdRequest(); // OrderGetOrderByCartIdRequest | 
@@ -1803,7 +1881,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1843,6 +1921,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetOrderByOrderNumberRequest(); // OrderGetOrderByOrderNumberRequest | 
@@ -1896,7 +1978,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1936,6 +2018,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetPaymentRequest(); // OrderGetPaymentRequest | 
@@ -1989,7 +2075,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2029,6 +2115,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetShipmentRequest(); // OrderGetShipmentRequest | 
@@ -2082,7 +2172,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2122,6 +2212,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderGetTransactionRequest(); // OrderGetTransactionRequest | 
@@ -2175,7 +2269,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2215,6 +2309,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderHoldOrderRequest(); // OrderHoldOrderRequest | 
@@ -2268,7 +2366,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2308,6 +2406,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderImportOrderRequest(); // OrderImportOrderRequest | 
@@ -2361,7 +2463,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2401,6 +2503,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderListFulfillmentsRequest(); // OrderListFulfillmentsRequest | 
@@ -2454,7 +2560,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2494,6 +2600,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderListOrdersRequest(); // OrderListOrdersRequest | 
@@ -2547,7 +2657,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2587,6 +2697,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderListOrdersByCustomerRequest(); // OrderListOrdersByCustomerRequest | 
@@ -2640,7 +2754,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2680,6 +2794,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderListOrdersByNumbersRequest(); // OrderListOrdersByNumbersRequest | 
@@ -2733,7 +2851,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2773,6 +2891,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderListShipmentsRequest(); // OrderListShipmentsRequest | 
@@ -2826,7 +2948,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2840,6 +2962,194 @@ No authorization required
 | **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="orderadddocument"></a>
+# **OrderAddDocument**
+> Object OrderAddDocument (OrderAddDocumentRequest body)
+
+Documents
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using order.Api;
+using order.Client;
+using order.Model;
+
+namespace Example
+{
+    public class OrderAddDocumentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var body = new OrderAddDocumentRequest(); // OrderAddDocumentRequest | 
+
+            try
+            {
+                // Documents
+                Object result = apiInstance.OrderAddDocument(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderAddDocument: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderAddDocumentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Documents
+    ApiResponse<Object> response = apiInstance.OrderAddDocumentWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderAddDocumentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**OrderAddDocumentRequest**](OrderAddDocumentRequest.md) |  |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
+| **0** | An unexpected error response. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="orderremovedocumentbycode"></a>
+# **OrderRemoveDocumentByCode**
+> Object OrderRemoveDocumentByCode (OrderRemoveDocumentByCodeRequest body)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using order.Api;
+using order.Client;
+using order.Model;
+
+namespace Example
+{
+    public class OrderRemoveDocumentByCodeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new OrderApi(config);
+            var body = new OrderRemoveDocumentByCodeRequest(); // OrderRemoveDocumentByCodeRequest | 
+
+            try
+            {
+                Object result = apiInstance.OrderRemoveDocumentByCode(body);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling OrderApi.OrderRemoveDocumentByCode: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the OrderRemoveDocumentByCodeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    ApiResponse<Object> response = apiInstance.OrderRemoveDocumentByCodeWithHttpInfo(body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling OrderApi.OrderRemoveDocumentByCodeWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **body** | [**OrderRemoveDocumentByCodeRequest**](OrderRemoveDocumentByCodeRequest.md) |  |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2866,6 +3176,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderPrintOrdersLabelsRequest(); // OrderPrintOrdersLabelsRequest | 
@@ -2919,7 +3233,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2959,6 +3273,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderQuashFulfillmentRequest(); // OrderQuashFulfillmentRequest | 
@@ -3012,7 +3330,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3052,6 +3370,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderQuashShipmentRequest(); // OrderQuashShipmentRequest | 
@@ -3105,7 +3427,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3145,6 +3467,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReceiveFulfillmentRequest(); // OrderReceiveFulfillmentRequest | 
@@ -3198,7 +3524,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3238,6 +3564,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReportFulfillmentErrorRequest(); // OrderReportFulfillmentErrorRequest | 
@@ -3291,7 +3621,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3331,6 +3661,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReportFulfillmentNotResolvableRequest(); // OrderReportFulfillmentNotResolvableRequest | 
@@ -3384,7 +3718,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3424,6 +3758,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReportFulfillmentReadyRequest(); // OrderReportFulfillmentReadyRequest | 
@@ -3477,7 +3815,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3517,6 +3855,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReportShipmentDeliveryRequest(); // OrderReportShipmentDeliveryRequest | 
@@ -3570,7 +3912,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3610,6 +3952,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderReportShipmentMissingStockRequest(); // OrderReportShipmentMissingStockRequest | 
@@ -3663,7 +4009,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3703,6 +4049,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderResolveShipmentMissingStockRequest(); // OrderResolveShipmentMissingStockRequest | 
@@ -3756,7 +4106,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3796,6 +4146,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderRetryFulfillmentRequest(); // OrderRetryFulfillmentRequest | 
@@ -3849,7 +4203,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3889,6 +4243,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderSearchOrdersRequest(); // OrderSearchOrdersRequest | 
@@ -3942,7 +4300,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3982,6 +4340,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderSendFulfillmentRequest(); // OrderSendFulfillmentRequest | 
@@ -4035,7 +4397,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4075,6 +4437,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderSendOrderNotificationRequest(); // OrderSendOrderNotificationRequest | 
@@ -4128,7 +4494,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4168,6 +4534,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderStartFulfillmentProcessingRequest(); // OrderStartFulfillmentProcessingRequest | 
@@ -4221,7 +4591,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4261,6 +4631,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderStartShipmentProcessingRequest(); // OrderStartShipmentProcessingRequest | 
@@ -4314,7 +4688,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4354,6 +4728,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderUnholdOrderRequest(); // OrderUnholdOrderRequest | 
@@ -4407,7 +4785,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4447,6 +4825,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderUpdateOrderRequest(); // OrderUpdateOrderRequest | 
@@ -4500,7 +4882,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4540,6 +4922,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "https://dom.api.gogemini.io";
+            // Configure API key authorization: Authorization
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
             var body = new OrderUpdatePaymentRequest(); // OrderUpdatePaymentRequest | 
@@ -4593,7 +4979,7 @@ catch (ApiException e)
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

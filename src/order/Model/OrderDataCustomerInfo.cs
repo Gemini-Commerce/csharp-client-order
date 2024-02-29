@@ -35,26 +35,54 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataCustomerInfo" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected OrderDataCustomerInfo() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderDataCustomerInfo" /> class.
+        /// </summary>
         /// <param name="grn">grn.</param>
-        /// <param name="firstname">firstname.</param>
-        /// <param name="lastname">lastname.</param>
-        /// <param name="email">email.</param>
+        /// <param name="firstname">firstname (required).</param>
+        /// <param name="lastname">lastname (required).</param>
+        /// <param name="email">email (required).</param>
         /// <param name="phone">phone.</param>
         /// <param name="segment">segment.</param>
         /// <param name="data">data.</param>
         /// <param name="certifiedEmail">certifiedEmail.</param>
         /// <param name="taxCode">taxCode.</param>
-        public OrderDataCustomerInfo(string grn = default(string), string firstname = default(string), string lastname = default(string), string email = default(string), string phone = default(string), string segment = default(string), string data = default(string), string certifiedEmail = default(string), string taxCode = default(string))
+        /// <param name="sdiCode">sdiCode.</param>
+        /// <param name="fiscalCode">fiscalCode.</param>
+        /// <param name="companyName">companyName.</param>
+        /// <param name="agentGrn">agentGrn.</param>
+        public OrderDataCustomerInfo(string grn = default(string), string firstname = default(string), string lastname = default(string), string email = default(string), string phone = default(string), string segment = default(string), string data = default(string), string certifiedEmail = default(string), string taxCode = default(string), string sdiCode = default(string), string fiscalCode = default(string), string companyName = default(string), string agentGrn = default(string))
         {
-            this.Grn = grn;
+            // to ensure "firstname" is required (not null)
+            if (firstname == null)
+            {
+                throw new ArgumentNullException("firstname is a required property for OrderDataCustomerInfo and cannot be null");
+            }
             this.Firstname = firstname;
+            // to ensure "lastname" is required (not null)
+            if (lastname == null)
+            {
+                throw new ArgumentNullException("lastname is a required property for OrderDataCustomerInfo and cannot be null");
+            }
             this.Lastname = lastname;
+            // to ensure "email" is required (not null)
+            if (email == null)
+            {
+                throw new ArgumentNullException("email is a required property for OrderDataCustomerInfo and cannot be null");
+            }
             this.Email = email;
+            this.Grn = grn;
             this.Phone = phone;
             this.Segment = segment;
             this.Data = data;
             this.CertifiedEmail = certifiedEmail;
             this.TaxCode = taxCode;
+            this.SdiCode = sdiCode;
+            this.FiscalCode = fiscalCode;
+            this.CompanyName = companyName;
+            this.AgentGrn = agentGrn;
         }
 
         /// <summary>
@@ -66,19 +94,19 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Firstname
         /// </summary>
-        [DataMember(Name = "firstname", EmitDefaultValue = false)]
+        [DataMember(Name = "firstname", IsRequired = true, EmitDefaultValue = true)]
         public string Firstname { get; set; }
 
         /// <summary>
         /// Gets or Sets Lastname
         /// </summary>
-        [DataMember(Name = "lastname", EmitDefaultValue = false)]
+        [DataMember(Name = "lastname", IsRequired = true, EmitDefaultValue = true)]
         public string Lastname { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", IsRequired = true, EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
@@ -112,6 +140,30 @@ namespace order.Model
         public string TaxCode { get; set; }
 
         /// <summary>
+        /// Gets or Sets SdiCode
+        /// </summary>
+        [DataMember(Name = "sdiCode", EmitDefaultValue = false)]
+        public string SdiCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FiscalCode
+        /// </summary>
+        [DataMember(Name = "fiscalCode", EmitDefaultValue = false)]
+        public string FiscalCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CompanyName
+        /// </summary>
+        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        public string CompanyName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AgentGrn
+        /// </summary>
+        [DataMember(Name = "agentGrn", EmitDefaultValue = false)]
+        public string AgentGrn { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -128,6 +180,10 @@ namespace order.Model
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  CertifiedEmail: ").Append(CertifiedEmail).Append("\n");
             sb.Append("  TaxCode: ").Append(TaxCode).Append("\n");
+            sb.Append("  SdiCode: ").Append(SdiCode).Append("\n");
+            sb.Append("  FiscalCode: ").Append(FiscalCode).Append("\n");
+            sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
+            sb.Append("  AgentGrn: ").Append(AgentGrn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

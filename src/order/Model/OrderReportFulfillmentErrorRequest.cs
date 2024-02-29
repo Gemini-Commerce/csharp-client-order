@@ -35,24 +35,39 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderReportFulfillmentErrorRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="fulfillmentId">fulfillmentId.</param>
+        [JsonConstructorAttribute]
+        protected OrderReportFulfillmentErrorRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderReportFulfillmentErrorRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="fulfillmentId">fulfillmentId (required).</param>
         public OrderReportFulfillmentErrorRequest(string tenantId = default(string), string fulfillmentId = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderReportFulfillmentErrorRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "fulfillmentId" is required (not null)
+            if (fulfillmentId == null)
+            {
+                throw new ArgumentNullException("fulfillmentId is a required property for OrderReportFulfillmentErrorRequest and cannot be null");
+            }
             this.FulfillmentId = fulfillmentId;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets FulfillmentId
         /// </summary>
-        [DataMember(Name = "fulfillmentId", EmitDefaultValue = false)]
+        [DataMember(Name = "fulfillmentId", IsRequired = true, EmitDefaultValue = true)]
         public string FulfillmentId { get; set; }
 
         /// <summary>

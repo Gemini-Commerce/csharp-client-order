@@ -36,18 +36,33 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
-        public OrderTransactionType? Type { get; set; }
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
+        public OrderTransactionType Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreatePaymentTransactionRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="paymentId">paymentId.</param>
-        /// <param name="type">type.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreatePaymentTransactionRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreatePaymentTransactionRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="paymentId">paymentId (required).</param>
+        /// <param name="type">type (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        public OrderCreatePaymentTransactionRequest(string tenantId = default(string), string paymentId = default(string), OrderTransactionType? type = default(OrderTransactionType?), string additionalInfo = default(string))
+        public OrderCreatePaymentTransactionRequest(string tenantId = default(string), string paymentId = default(string), OrderTransactionType type = default(OrderTransactionType), string additionalInfo = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreatePaymentTransactionRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "paymentId" is required (not null)
+            if (paymentId == null)
+            {
+                throw new ArgumentNullException("paymentId is a required property for OrderCreatePaymentTransactionRequest and cannot be null");
+            }
             this.PaymentId = paymentId;
             this.Type = type;
             this.AdditionalInfo = additionalInfo;
@@ -56,13 +71,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentId
         /// </summary>
-        [DataMember(Name = "paymentId", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentId", IsRequired = true, EmitDefaultValue = true)]
         public string PaymentId { get; set; }
 
         /// <summary>

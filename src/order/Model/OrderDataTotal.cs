@@ -36,23 +36,33 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
-        public OrderDataTotalCode? Code { get; set; }
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
+        public OrderDataTotalCode Code { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataTotal" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
-        /// <param name="value">value.</param>
-        public OrderDataTotal(OrderDataTotalCode? code = default(OrderDataTotalCode?), OrderMoney value = default(OrderMoney))
+        [JsonConstructorAttribute]
+        protected OrderDataTotal() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderDataTotal" /> class.
+        /// </summary>
+        /// <param name="code">code (required).</param>
+        /// <param name="value">value (required).</param>
+        public OrderDataTotal(OrderDataTotalCode code = default(OrderDataTotalCode), OrderMoney value = default(OrderMoney))
         {
             this.Code = code;
+            // to ensure "value" is required (not null)
+            if (value == null)
+            {
+                throw new ArgumentNullException("value is a required property for OrderDataTotal and cannot be null");
+            }
             this.Value = value;
         }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
+        [DataMember(Name = "value", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Value { get; set; }
 
         /// <summary>

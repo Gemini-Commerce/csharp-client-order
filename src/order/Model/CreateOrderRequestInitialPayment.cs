@@ -35,16 +35,31 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOrderRequestInitialPayment" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
+        [JsonConstructorAttribute]
+        protected CreateOrderRequestInitialPayment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateOrderRequestInitialPayment" /> class.
+        /// </summary>
+        /// <param name="code">code (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="amount">amount.</param>
+        /// <param name="amount">amount (required).</param>
         /// <param name="ccInfo">ccInfo.</param>
         /// <param name="transaction">transaction.</param>
         public CreateOrderRequestInitialPayment(string code = default(string), string additionalInfo = default(string), OrderMoney amount = default(OrderMoney), PaymentCcInfo ccInfo = default(PaymentCcInfo), InitialPaymentInitialTransaction transaction = default(InitialPaymentInitialTransaction))
         {
+            // to ensure "code" is required (not null)
+            if (code == null)
+            {
+                throw new ArgumentNullException("code is a required property for CreateOrderRequestInitialPayment and cannot be null");
+            }
             this.Code = code;
-            this.AdditionalInfo = additionalInfo;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for CreateOrderRequestInitialPayment and cannot be null");
+            }
             this.Amount = amount;
+            this.AdditionalInfo = additionalInfo;
             this.CcInfo = ccInfo;
             this.Transaction = transaction;
         }
@@ -52,7 +67,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -64,7 +79,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Amount { get; set; }
 
         /// <summary>

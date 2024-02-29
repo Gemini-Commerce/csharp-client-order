@@ -35,12 +35,27 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderQuashShipmentRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="shipmentId">shipmentId.</param>
+        [JsonConstructorAttribute]
+        protected OrderQuashShipmentRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderQuashShipmentRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="shipmentId">shipmentId (required).</param>
         /// <param name="reason">reason.</param>
         public OrderQuashShipmentRequest(string tenantId = default(string), string shipmentId = default(string), string reason = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderQuashShipmentRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "shipmentId" is required (not null)
+            if (shipmentId == null)
+            {
+                throw new ArgumentNullException("shipmentId is a required property for OrderQuashShipmentRequest and cannot be null");
+            }
             this.ShipmentId = shipmentId;
             this.Reason = reason;
         }
@@ -48,13 +63,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets ShipmentId
         /// </summary>
-        [DataMember(Name = "shipmentId", EmitDefaultValue = false)]
+        [DataMember(Name = "shipmentId", IsRequired = true, EmitDefaultValue = true)]
         public string ShipmentId { get; set; }
 
         /// <summary>

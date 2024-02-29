@@ -90,5 +90,14 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'CcInfo'
         }
+
+        /// <summary>
+        /// Test the property 'IsUpfront'
+        /// </summary>
+        [Fact]
+        public void IsUpfrontTest()
+        {
+            // TODO unit test for the property 'IsUpfront'
+        }
     }
 }

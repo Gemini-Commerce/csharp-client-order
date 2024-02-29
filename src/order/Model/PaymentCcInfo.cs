@@ -42,7 +42,7 @@ namespace order.Model
         /// <param name="numberEnc">numberEnc.</param>
         /// <param name="owner">owner.</param>
         /// <param name="avsStatus">avsStatus.</param>
-        /// <param name="type">type.</param>
+        /// <param name="type">card type MasterCard, Visa...</param>
         public PaymentCcInfo(string approval = default(string), int expMonth = default(int), string expYear = default(string), string last4 = default(string), string numberEnc = default(string), string owner = default(string), string avsStatus = default(string), string type = default(string))
         {
             this.Approval = approval;
@@ -98,8 +98,9 @@ namespace order.Model
         public string AvsStatus { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// card type MasterCard, Visa..
         /// </summary>
+        /// <value>card type MasterCard, Visa..</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 

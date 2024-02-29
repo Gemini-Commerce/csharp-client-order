@@ -35,38 +35,63 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreatePaymentRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
-        /// <param name="code">code.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreatePaymentRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreatePaymentRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderId">orderId (required).</param>
+        /// <param name="code">code (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="amount">amount.</param>
+        /// <param name="amount">amount (required).</param>
         /// <param name="ccInfo">ccInfo.</param>
         public OrderCreatePaymentRequest(string tenantId = default(string), string orderId = default(string), string code = default(string), string additionalInfo = default(string), OrderMoney amount = default(OrderMoney), PaymentCcInfo ccInfo = default(PaymentCcInfo))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreatePaymentRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderCreatePaymentRequest and cannot be null");
+            }
             this.OrderId = orderId;
+            // to ensure "code" is required (not null)
+            if (code == null)
+            {
+                throw new ArgumentNullException("code is a required property for OrderCreatePaymentRequest and cannot be null");
+            }
             this.Code = code;
-            this.AdditionalInfo = additionalInfo;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for OrderCreatePaymentRequest and cannot be null");
+            }
             this.Amount = amount;
+            this.AdditionalInfo = additionalInfo;
             this.CcInfo = ccInfo;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -78,7 +103,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Amount { get; set; }
 
         /// <summary>

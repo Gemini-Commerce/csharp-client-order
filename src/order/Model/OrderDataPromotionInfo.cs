@@ -35,12 +35,17 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataPromotionInfo" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected OrderDataPromotionInfo() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderDataPromotionInfo" /> class.
+        /// </summary>
         /// <param name="promotionGrn">promotionGrn.</param>
-        /// <param name="type">type.</param>
+        /// <param name="type">type (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="name">name.</param>
+        /// <param name="name">name (required).</param>
         /// <param name="description">description.</param>
-        /// <param name="amount">amount.</param>
+        /// <param name="amount">amount (required).</param>
         /// <param name="couponCode">couponCode.</param>
         /// <param name="vatAmount">vatAmount.</param>
         /// <param name="vatPercentage">vatPercentage.</param>
@@ -48,12 +53,27 @@ namespace order.Model
         /// <param name="vatCalculated">vatCalculated.</param>
         public OrderDataPromotionInfo(string promotionGrn = default(string), string type = default(string), string additionalInfo = default(string), string name = default(string), string description = default(string), OrderMoney amount = default(OrderMoney), string couponCode = default(string), OrderMoney vatAmount = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool))
         {
-            this.PromotionGrn = promotionGrn;
+            // to ensure "type" is required (not null)
+            if (type == null)
+            {
+                throw new ArgumentNullException("type is a required property for OrderDataPromotionInfo and cannot be null");
+            }
             this.Type = type;
-            this.AdditionalInfo = additionalInfo;
+            // to ensure "name" is required (not null)
+            if (name == null)
+            {
+                throw new ArgumentNullException("name is a required property for OrderDataPromotionInfo and cannot be null");
+            }
             this.Name = name;
-            this.Description = description;
+            // to ensure "amount" is required (not null)
+            if (amount == null)
+            {
+                throw new ArgumentNullException("amount is a required property for OrderDataPromotionInfo and cannot be null");
+            }
             this.Amount = amount;
+            this.PromotionGrn = promotionGrn;
+            this.AdditionalInfo = additionalInfo;
+            this.Description = description;
             this.CouponCode = couponCode;
             this.VatAmount = vatAmount;
             this.VatPercentage = vatPercentage;
@@ -70,7 +90,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
@@ -82,7 +102,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -94,7 +114,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Amount { get; set; }
 
         /// <summary>

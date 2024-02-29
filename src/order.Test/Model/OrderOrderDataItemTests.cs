@@ -173,6 +173,24 @@ namespace order.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UnitCustomPrice'
+        /// </summary>
+        [Fact]
+        public void UnitCustomPriceTest()
+        {
+            // TODO unit test for the property 'UnitCustomPrice'
+        }
+
+        /// <summary>
+        /// Test the property 'RowCustomPrice'
+        /// </summary>
+        [Fact]
+        public void RowCustomPriceTest()
+        {
+            // TODO unit test for the property 'RowCustomPrice'
+        }
+
+        /// <summary>
         /// Test the property 'VatPercentage'
         /// </summary>
         [Fact]
@@ -278,6 +296,15 @@ namespace order.Test.Model
         public void ProductIsVirtualTest()
         {
             // TODO unit test for the property 'ProductIsVirtual'
+        }
+
+        /// <summary>
+        /// Test the property 'ProductConfiguration'
+        /// </summary>
+        [Fact]
+        public void ProductConfigurationTest()
+        {
+            // TODO unit test for the property 'ProductConfiguration'
         }
     }
 }

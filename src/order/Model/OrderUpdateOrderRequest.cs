@@ -35,13 +35,28 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderUpdateOrderRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="id">id.</param>
+        [JsonConstructorAttribute]
+        protected OrderUpdateOrderRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderUpdateOrderRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="id">id (required).</param>
         /// <param name="payload">payload.</param>
         /// <param name="fieldMask">fieldMask.</param>
-        public OrderUpdateOrderRequest(string tenantId = default(string), string id = default(string), UpdateOrderRequestPayload payload = default(UpdateOrderRequestPayload), List<string> fieldMask = default(List<string>))
+        public OrderUpdateOrderRequest(string tenantId = default(string), string id = default(string), UpdateOrderRequestPayload payload = default(UpdateOrderRequestPayload), string fieldMask = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderUpdateOrderRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "id" is required (not null)
+            if (id == null)
+            {
+                throw new ArgumentNullException("id is a required property for OrderUpdateOrderRequest and cannot be null");
+            }
             this.Id = id;
             this.Payload = payload;
             this.FieldMask = fieldMask;
@@ -50,13 +65,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
@@ -69,7 +84,7 @@ namespace order.Model
         /// Gets or Sets FieldMask
         /// </summary>
         [DataMember(Name = "fieldMask", EmitDefaultValue = false)]
-        public List<string> FieldMask { get; set; }
+        public string FieldMask { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

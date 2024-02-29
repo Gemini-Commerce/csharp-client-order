@@ -35,12 +35,27 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateHistoryRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="orderId">orderId.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreateHistoryRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreateHistoryRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="orderId">orderId (required).</param>
         /// <param name="comment">comment.</param>
         public OrderCreateHistoryRequest(string tenantId = default(string), string orderId = default(string), string comment = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreateHistoryRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "orderId" is required (not null)
+            if (orderId == null)
+            {
+                throw new ArgumentNullException("orderId is a required property for OrderCreateHistoryRequest and cannot be null");
+            }
             this.OrderId = orderId;
             this.Comment = comment;
         }
@@ -48,13 +63,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
-        [DataMember(Name = "orderId", EmitDefaultValue = false)]
+        [DataMember(Name = "orderId", IsRequired = true, EmitDefaultValue = true)]
         public string OrderId { get; set; }
 
         /// <summary>

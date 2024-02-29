@@ -35,12 +35,27 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderUpdatePaymentRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="paymentId">paymentId.</param>
+        [JsonConstructorAttribute]
+        protected OrderUpdatePaymentRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderUpdatePaymentRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="paymentId">paymentId (required).</param>
         /// <param name="ccInfo">ccInfo.</param>
         public OrderUpdatePaymentRequest(string tenantId = default(string), string paymentId = default(string), PaymentCcInfo ccInfo = default(PaymentCcInfo))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderUpdatePaymentRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "paymentId" is required (not null)
+            if (paymentId == null)
+            {
+                throw new ArgumentNullException("paymentId is a required property for OrderUpdatePaymentRequest and cannot be null");
+            }
             this.PaymentId = paymentId;
             this.CcInfo = ccInfo;
         }
@@ -48,13 +63,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentId
         /// </summary>
-        [DataMember(Name = "paymentId", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentId", IsRequired = true, EmitDefaultValue = true)]
         public string PaymentId { get; set; }
 
         /// <summary>

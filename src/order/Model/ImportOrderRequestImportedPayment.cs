@@ -35,22 +35,39 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportOrderRequestImportedPayment" /> class.
         /// </summary>
-        /// <param name="code">code.</param>
+        [JsonConstructorAttribute]
+        protected ImportOrderRequestImportedPayment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ImportOrderRequestImportedPayment" /> class.
+        /// </summary>
+        /// <param name="code">code (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        /// <param name="amounts">amounts.</param>
+        /// <param name="amounts">amounts (required).</param>
         /// <param name="ccInfo">ccInfo.</param>
-        public ImportOrderRequestImportedPayment(string code = default(string), string additionalInfo = default(string), List<OrderPaymentAmount> amounts = default(List<OrderPaymentAmount>), PaymentCcInfo ccInfo = default(PaymentCcInfo))
+        /// <param name="isUpfront">isUpfront.</param>
+        public ImportOrderRequestImportedPayment(string code = default(string), string additionalInfo = default(string), List<OrderPaymentAmount> amounts = default(List<OrderPaymentAmount>), PaymentCcInfo ccInfo = default(PaymentCcInfo), bool isUpfront = default(bool))
         {
+            // to ensure "code" is required (not null)
+            if (code == null)
+            {
+                throw new ArgumentNullException("code is a required property for ImportOrderRequestImportedPayment and cannot be null");
+            }
             this.Code = code;
-            this.AdditionalInfo = additionalInfo;
+            // to ensure "amounts" is required (not null)
+            if (amounts == null)
+            {
+                throw new ArgumentNullException("amounts is a required property for ImportOrderRequestImportedPayment and cannot be null");
+            }
             this.Amounts = amounts;
+            this.AdditionalInfo = additionalInfo;
             this.CcInfo = ccInfo;
+            this.IsUpfront = isUpfront;
         }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", IsRequired = true, EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -62,7 +79,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amounts
         /// </summary>
-        [DataMember(Name = "amounts", EmitDefaultValue = false)]
+        [DataMember(Name = "amounts", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderPaymentAmount> Amounts { get; set; }
 
         /// <summary>
@@ -70,6 +87,12 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "ccInfo", EmitDefaultValue = false)]
         public PaymentCcInfo CcInfo { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsUpfront
+        /// </summary>
+        [DataMember(Name = "isUpfront", EmitDefaultValue = true)]
+        public bool IsUpfront { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,6 +106,7 @@ namespace order.Model
             sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
             sb.Append("  Amounts: ").Append(Amounts).Append("\n");
             sb.Append("  CcInfo: ").Append(CcInfo).Append("\n");
+            sb.Append("  IsUpfront: ").Append(IsUpfront).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

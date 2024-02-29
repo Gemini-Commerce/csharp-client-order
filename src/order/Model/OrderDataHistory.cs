@@ -35,13 +35,9 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataHistory" /> class.
         /// </summary>
-        /// <param name="createdAt">createdAt.</param>
-        /// <param name="status">status.</param>
         /// <param name="comment">comment.</param>
-        public OrderDataHistory(DateTime createdAt = default(DateTime), string status = default(string), string comment = default(string))
+        public OrderDataHistory(string comment = default(string))
         {
-            this.CreatedAt = createdAt;
-            this.Status = status;
             this.Comment = comment;
         }
 
@@ -49,14 +45,30 @@ namespace order.Model
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name = "createdAt", EmitDefaultValue = false)]
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; private set; }
 
+        /// <summary>
+        /// Returns false as CreatedAt should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedAt()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public string Status { get; set; }
+        public string Status { get; private set; }
 
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Comment
         /// </summary>

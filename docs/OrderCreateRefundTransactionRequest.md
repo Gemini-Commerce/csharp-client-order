@@ -6,8 +6,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId**| **string** |   | [optional]
-**RefundId**| **string** |   | [optional]
+**TenantId**| **string** |   |
+**RefundId**| **string** |   |
 **ParentTransactionId**| **string** |   | [optional]
 **Type**| **OrderTransactionType** |  for more information please, see Model/OrderTransactionType.php  | [optional]
 **AdditionalInfo**| **string** |   | [optional]

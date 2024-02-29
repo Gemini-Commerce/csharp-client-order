@@ -6,16 +6,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt**| **DateTime** |   | [optional]
-**UpdatedAt**| **DateTime** |   | [optional]
-**Id**| **string** |   | [optional]
-**Grn**| **string** |   | [optional]
+**CreatedAt**| **DateTime** |   | [optional] [readonly]
+**UpdatedAt**| **DateTime** |   | [optional] [readonly]
+**Id**| **string** |   | [optional] [readonly]
+**Grn**| **string** |   | [optional] [readonly]
 **Number**| **string** |   | [optional]
-**Status**| **string** |   | [optional]
+**Status**| **string** |   | [optional] [readonly]
 **Channel**| **string** |   | [optional]
 **Market**| **string** |   | [optional]
-**Locale**| **string** |   | [optional]
+**Locale**| **string** |   |
 **AdditionalInfo**| **Object** |   | [optional]
+**Documents**| [**List<OrderDataDocument>**](OrderDataDocument.md) |   | [optional]
 **Items**| [**List<OrderOrderDataItem>**](OrderOrderDataItem.md) |   | [optional]
 **Payments**| [**List<OrderPayment>**](OrderPayment.md) |   | [optional]
 **Shipments**| [**List<OrderShipment>**](OrderShipment.md) |   | [optional]
@@ -32,11 +33,11 @@ Name | Type | Description | Notes
 **CartGrn**| **string** |   | [optional]
 **OnHold**| **bool** |   | [optional]
 **HistoryEvents**| [**List<OrderDataHistory>**](OrderDataHistory.md) |   | [optional]
-**Fulfillments**| [**List<OrderFulfillment>**](OrderFulfillment.md) |   | [optional]
+**Fulfillments**| [**List<OrderFulfillment>**](OrderFulfillment.md) |   | [optional] [readonly]
 **Notes**| **string** |   | [optional]
 **IsDeleted**| **bool** | this field is used to delete an order in \&quot;soft-delete mode\&quot;. This field must be used from get/list endpoint to exclude these orders.  | [optional]
-**InsertedAt**| **DateTime** | this field is used to save the original created_at order date. The created_at field is used to filter data.  | [optional]
-**DeletedAt**| **DateTime** |   | [optional]
+**InsertedAt**| **DateTime** | this field is used to save the original created_at order date. The created_at field is used to filter data.  | [optional] [readonly]
+**DeletedAt**| **DateTime** |   | [optional] [readonly]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

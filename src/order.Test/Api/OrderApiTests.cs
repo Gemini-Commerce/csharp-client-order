@@ -416,6 +416,30 @@ namespace order.Test.Api
         }
 
         /// <summary>
+        /// Test OrderAddDocument
+        /// </summary>
+        [Fact]
+        public void OrderAddDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OrderAddDocumentRequest body = null;
+            //var response = instance.OrderAddDocument(body);
+            //Assert.IsType<Object>(response);
+        }
+
+        /// <summary>
+        /// Test OrderRemoveDocumentByCode
+        /// </summary>
+        [Fact]
+        public void OrderRemoveDocumentByCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //OrderRemoveDocumentByCodeRequest body = null;
+            //var response = instance.OrderRemoveDocumentByCode(body);
+            //Assert.IsType<Object>(response);
+        }
+
+        /// <summary>
         /// Test PrintOrdersLabels
         /// </summary>
         [Fact]

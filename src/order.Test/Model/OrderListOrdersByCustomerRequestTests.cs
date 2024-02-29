@@ -90,5 +90,14 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'PageToken'
         }
+
+        /// <summary>
+        /// Test the property 'OrderBy'
+        /// </summary>
+        [Fact]
+        public void OrderByTest()
+        {
+            // TODO unit test for the property 'OrderBy'
+        }
     }
 }

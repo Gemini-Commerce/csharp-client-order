@@ -36,14 +36,19 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
-        public OrderTransactionType? Type { get; set; }
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
+        public OrderTransactionType Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="InitialPaymentInitialTransaction" /> class.
         /// </summary>
-        /// <param name="type">type.</param>
+        [JsonConstructorAttribute]
+        protected InitialPaymentInitialTransaction() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InitialPaymentInitialTransaction" /> class.
+        /// </summary>
+        /// <param name="type">type (required).</param>
         /// <param name="additionalInfo">additionalInfo.</param>
-        public InitialPaymentInitialTransaction(OrderTransactionType? type = default(OrderTransactionType?), string additionalInfo = default(string))
+        public InitialPaymentInitialTransaction(OrderTransactionType type = default(OrderTransactionType), string additionalInfo = default(string))
         {
             this.Type = type;
             this.AdditionalInfo = additionalInfo;

@@ -35,18 +35,38 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateRefundRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="paymentId">paymentId.</param>
+        [JsonConstructorAttribute]
+        protected OrderCreateRefundRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderCreateRefundRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="paymentId">paymentId (required).</param>
         /// <param name="items">items.</param>
-        /// <param name="amounts">amounts.</param>
+        /// <param name="amounts">amounts (required).</param>
         /// <param name="note">note.</param>
         /// <param name="additionalInfo">additionalInfo.</param>
         public OrderCreateRefundRequest(string tenantId = default(string), string paymentId = default(string), List<OrderRefundItem> items = default(List<OrderRefundItem>), List<OrderRefundAmount> amounts = default(List<OrderRefundAmount>), string note = default(string), string additionalInfo = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderCreateRefundRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "paymentId" is required (not null)
+            if (paymentId == null)
+            {
+                throw new ArgumentNullException("paymentId is a required property for OrderCreateRefundRequest and cannot be null");
+            }
             this.PaymentId = paymentId;
-            this.Items = items;
+            // to ensure "amounts" is required (not null)
+            if (amounts == null)
+            {
+                throw new ArgumentNullException("amounts is a required property for OrderCreateRefundRequest and cannot be null");
+            }
             this.Amounts = amounts;
+            this.Items = items;
             this.Note = note;
             this.AdditionalInfo = additionalInfo;
         }
@@ -54,13 +74,13 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentId
         /// </summary>
-        [DataMember(Name = "paymentId", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentId", IsRequired = true, EmitDefaultValue = true)]
         public string PaymentId { get; set; }
 
         /// <summary>
@@ -72,7 +92,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Amounts
         /// </summary>
-        [DataMember(Name = "amounts", EmitDefaultValue = false)]
+        [DataMember(Name = "amounts", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderRefundAmount> Amounts { get; set; }
 
         /// <summary>

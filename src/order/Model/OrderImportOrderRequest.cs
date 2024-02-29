@@ -36,53 +36,128 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
-        [DataMember(Name = "currency", EmitDefaultValue = false)]
-        public OrderCurrency? Currency { get; set; }
+        [DataMember(Name = "currency", IsRequired = true, EmitDefaultValue = true)]
+        public OrderCurrency Currency { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderImportOrderRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
+        [JsonConstructorAttribute]
+        protected OrderImportOrderRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderImportOrderRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
         /// <param name="createdAt">createdAt.</param>
-        /// <param name="number">number.</param>
+        /// <param name="number">number (required).</param>
         /// <param name="channel">channel.</param>
-        /// <param name="market">market.</param>
-        /// <param name="locale">locale.</param>
-        /// <param name="customerInfo">customerInfo.</param>
-        /// <param name="shippingAddress">shippingAddress.</param>
-        /// <param name="billingAddress">billingAddress.</param>
-        /// <param name="payments">payments.</param>
-        /// <param name="paymentsInfo">paymentsInfo.</param>
-        /// <param name="shipmentsInfo">shipmentsInfo.</param>
-        /// <param name="items">items.</param>
-        /// <param name="subtotals">subtotals.</param>
-        /// <param name="totals">totals.</param>
-        /// <param name="status">status.</param>
-        /// <param name="currency">currency.</param>
-        public OrderImportOrderRequest(string tenantId = default(string), DateTime createdAt = default(DateTime), string number = default(string), string channel = default(string), string market = default(string), string locale = default(string), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderPostalAddress billingAddress = default(OrderPostalAddress), List<ImportOrderRequestImportedPayment> payments = default(List<ImportOrderRequestImportedPayment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), string status = default(string), OrderCurrency? currency = default(OrderCurrency?))
+        /// <param name="market">market (required).</param>
+        /// <param name="locale">locale (required).</param>
+        /// <param name="customerInfo">customerInfo (required).</param>
+        /// <param name="shippingAddress">shippingAddress (required).</param>
+        /// <param name="billingAddress">billingAddress (required).</param>
+        /// <param name="payments">payments (required).</param>
+        /// <param name="paymentsInfo">paymentsInfo (required).</param>
+        /// <param name="shipmentsInfo">shipmentsInfo (required).</param>
+        /// <param name="items">items (required).</param>
+        /// <param name="subtotals">subtotals (required).</param>
+        /// <param name="totals">totals (required).</param>
+        /// <param name="status">status (required).</param>
+        /// <param name="currency">currency (required).</param>
+        public OrderImportOrderRequest(string tenantId = default(string), DateTime createdAt = default(DateTime), string number = default(string), string channel = default(string), string market = default(string), string locale = default(string), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderPostalAddress billingAddress = default(OrderPostalAddress), List<ImportOrderRequestImportedPayment> payments = default(List<ImportOrderRequestImportedPayment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), string status = default(string), OrderCurrency currency = default(OrderCurrency))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.TenantId = tenantId;
-            this.CreatedAt = createdAt;
+            // to ensure "number" is required (not null)
+            if (number == null)
+            {
+                throw new ArgumentNullException("number is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Number = number;
-            this.Channel = channel;
+            // to ensure "market" is required (not null)
+            if (market == null)
+            {
+                throw new ArgumentNullException("market is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Market = market;
+            // to ensure "locale" is required (not null)
+            if (locale == null)
+            {
+                throw new ArgumentNullException("locale is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Locale = locale;
+            // to ensure "customerInfo" is required (not null)
+            if (customerInfo == null)
+            {
+                throw new ArgumentNullException("customerInfo is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.CustomerInfo = customerInfo;
+            // to ensure "shippingAddress" is required (not null)
+            if (shippingAddress == null)
+            {
+                throw new ArgumentNullException("shippingAddress is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.ShippingAddress = shippingAddress;
+            // to ensure "billingAddress" is required (not null)
+            if (billingAddress == null)
+            {
+                throw new ArgumentNullException("billingAddress is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.BillingAddress = billingAddress;
+            // to ensure "payments" is required (not null)
+            if (payments == null)
+            {
+                throw new ArgumentNullException("payments is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Payments = payments;
+            // to ensure "paymentsInfo" is required (not null)
+            if (paymentsInfo == null)
+            {
+                throw new ArgumentNullException("paymentsInfo is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.PaymentsInfo = paymentsInfo;
+            // to ensure "shipmentsInfo" is required (not null)
+            if (shipmentsInfo == null)
+            {
+                throw new ArgumentNullException("shipmentsInfo is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.ShipmentsInfo = shipmentsInfo;
+            // to ensure "items" is required (not null)
+            if (items == null)
+            {
+                throw new ArgumentNullException("items is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Items = items;
+            // to ensure "subtotals" is required (not null)
+            if (subtotals == null)
+            {
+                throw new ArgumentNullException("subtotals is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Subtotals = subtotals;
+            // to ensure "totals" is required (not null)
+            if (totals == null)
+            {
+                throw new ArgumentNullException("totals is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Totals = totals;
+            // to ensure "status" is required (not null)
+            if (status == null)
+            {
+                throw new ArgumentNullException("status is a required property for OrderImportOrderRequest and cannot be null");
+            }
             this.Status = status;
             this.Currency = currency;
+            this.CreatedAt = createdAt;
+            this.Channel = channel;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
@@ -94,7 +169,7 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Number
         /// </summary>
-        [DataMember(Name = "number", EmitDefaultValue = false)]
+        [DataMember(Name = "number", IsRequired = true, EmitDefaultValue = true)]
         public string Number { get; set; }
 
         /// <summary>
@@ -106,73 +181,73 @@ namespace order.Model
         /// <summary>
         /// Gets or Sets Market
         /// </summary>
-        [DataMember(Name = "market", EmitDefaultValue = false)]
+        [DataMember(Name = "market", IsRequired = true, EmitDefaultValue = true)]
         public string Market { get; set; }
 
         /// <summary>
         /// Gets or Sets Locale
         /// </summary>
-        [DataMember(Name = "locale", EmitDefaultValue = false)]
+        [DataMember(Name = "locale", IsRequired = true, EmitDefaultValue = true)]
         public string Locale { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerInfo
         /// </summary>
-        [DataMember(Name = "customerInfo", EmitDefaultValue = false)]
+        [DataMember(Name = "customerInfo", IsRequired = true, EmitDefaultValue = true)]
         public OrderDataCustomerInfo CustomerInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets ShippingAddress
         /// </summary>
-        [DataMember(Name = "shippingAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "shippingAddress", IsRequired = true, EmitDefaultValue = true)]
         public OrderPostalAddress ShippingAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets BillingAddress
         /// </summary>
-        [DataMember(Name = "billingAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "billingAddress", IsRequired = true, EmitDefaultValue = true)]
         public OrderPostalAddress BillingAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets Payments
         /// </summary>
-        [DataMember(Name = "payments", EmitDefaultValue = false)]
+        [DataMember(Name = "payments", IsRequired = true, EmitDefaultValue = true)]
         public List<ImportOrderRequestImportedPayment> Payments { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentsInfo
         /// </summary>
-        [DataMember(Name = "paymentsInfo", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentsInfo", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderDataPaymentInfo> PaymentsInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets ShipmentsInfo
         /// </summary>
-        [DataMember(Name = "shipmentsInfo", EmitDefaultValue = false)]
+        [DataMember(Name = "shipmentsInfo", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderDataShipmentInfo> ShipmentsInfo { get; set; }
 
         /// <summary>
         /// Gets or Sets Items
         /// </summary>
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "items", IsRequired = true, EmitDefaultValue = true)]
         public List<OrderOrderDataItem> Items { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtotals
         /// </summary>
-        [DataMember(Name = "subtotals", EmitDefaultValue = false)]
+        [DataMember(Name = "subtotals", IsRequired = true, EmitDefaultValue = true)]
         public Dictionary<string, OrderDataSubtotal> Subtotals { get; set; }
 
         /// <summary>
         /// Gets or Sets Totals
         /// </summary>
-        [DataMember(Name = "totals", EmitDefaultValue = false)]
+        [DataMember(Name = "totals", IsRequired = true, EmitDefaultValue = true)]
         public Dictionary<string, OrderDataTotal> Totals { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>

@@ -35,24 +35,39 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderGetOrderByCartIdRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
-        /// <param name="cartId">cartId.</param>
+        [JsonConstructorAttribute]
+        protected OrderGetOrderByCartIdRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderGetOrderByCartIdRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
+        /// <param name="cartId">cartId (required).</param>
         public OrderGetOrderByCartIdRequest(string tenantId = default(string), string cartId = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderGetOrderByCartIdRequest and cannot be null");
+            }
             this.TenantId = tenantId;
+            // to ensure "cartId" is required (not null)
+            if (cartId == null)
+            {
+                throw new ArgumentNullException("cartId is a required property for OrderGetOrderByCartIdRequest and cannot be null");
+            }
             this.CartId = cartId;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets CartId
         /// </summary>
-        [DataMember(Name = "cartId", EmitDefaultValue = false)]
+        [DataMember(Name = "cartId", IsRequired = true, EmitDefaultValue = true)]
         public string CartId { get; set; }
 
         /// <summary>

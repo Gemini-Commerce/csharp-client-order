@@ -35,7 +35,12 @@ namespace order.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderSearchOrdersRequest" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
+        [JsonConstructorAttribute]
+        protected OrderSearchOrdersRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderSearchOrdersRequest" /> class.
+        /// </summary>
+        /// <param name="tenantId">tenantId (required).</param>
         /// <param name="searchQuery">searchQuery.</param>
         /// <param name="pageSize">The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100..</param>
         /// <param name="pageToken">A page token, received from a previous &#x60;ListOrders&#x60; call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to &#x60;ListOrders&#x60; must match the call that provided the page token..</param>
@@ -44,8 +49,14 @@ namespace order.Model
         /// <param name="fromDate">fromDate.</param>
         /// <param name="toDate">toDate.</param>
         /// <param name="paymentFilter">paymentFilter.</param>
-        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter))
+        /// <param name="agentGrn">agentGrn.</param>
+        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter), string agentGrn = default(string))
         {
+            // to ensure "tenantId" is required (not null)
+            if (tenantId == null)
+            {
+                throw new ArgumentNullException("tenantId is a required property for OrderSearchOrdersRequest and cannot be null");
+            }
             this.TenantId = tenantId;
             this.SearchQuery = searchQuery;
             this.PageSize = pageSize;
@@ -55,12 +66,13 @@ namespace order.Model
             this.FromDate = fromDate;
             this.ToDate = toDate;
             this.PaymentFilter = paymentFilter;
+            this.AgentGrn = agentGrn;
         }
 
         /// <summary>
         /// Gets or Sets TenantId
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        [DataMember(Name = "tenantId", IsRequired = true, EmitDefaultValue = true)]
         public string TenantId { get; set; }
 
         /// <summary>
@@ -114,6 +126,12 @@ namespace order.Model
         public OrderPaymentFilter PaymentFilter { get; set; }
 
         /// <summary>
+        /// Gets or Sets AgentGrn
+        /// </summary>
+        [DataMember(Name = "agentGrn", EmitDefaultValue = false)]
+        public string AgentGrn { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -130,6 +148,7 @@ namespace order.Model
             sb.Append("  FromDate: ").Append(FromDate).Append("\n");
             sb.Append("  ToDate: ").Append(ToDate).Append("\n");
             sb.Append("  PaymentFilter: ").Append(PaymentFilter).Append("\n");
+            sb.Append("  AgentGrn: ").Append(AgentGrn).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
