@@ -14,7 +14,7 @@
     <RootNamespace>order</RootNamespace>
     <Version>1.0.0</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\order.xml</DocumentationFile>
-    <RepositoryUrl>https://github.com/gemini-commerce/csharp-client-order.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Gemini-Commerce/csharp-client-order.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Minor update</PackageReleaseNotes>
     <Nullable>annotations</Nullable>
