@@ -63,7 +63,8 @@ namespace order.Model
         /// <param name="totals">totals (required).</param>
         /// <param name="status">status (required).</param>
         /// <param name="currency">currency (required).</param>
-        public OrderImportOrderRequest(string tenantId = default(string), DateTime createdAt = default(DateTime), string number = default(string), string channel = default(string), string market = default(string), string locale = default(string), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderPostalAddress billingAddress = default(OrderPostalAddress), List<ImportOrderRequestImportedPayment> payments = default(List<ImportOrderRequestImportedPayment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), string status = default(string), OrderCurrency currency = default(OrderCurrency))
+        /// <param name="vatIncluded">vatIncluded.</param>
+        public OrderImportOrderRequest(string tenantId = default(string), DateTime createdAt = default(DateTime), string number = default(string), string channel = default(string), string market = default(string), string locale = default(string), OrderDataCustomerInfo customerInfo = default(OrderDataCustomerInfo), OrderPostalAddress shippingAddress = default(OrderPostalAddress), OrderPostalAddress billingAddress = default(OrderPostalAddress), List<ImportOrderRequestImportedPayment> payments = default(List<ImportOrderRequestImportedPayment>), List<OrderDataPaymentInfo> paymentsInfo = default(List<OrderDataPaymentInfo>), List<OrderDataShipmentInfo> shipmentsInfo = default(List<OrderDataShipmentInfo>), List<OrderOrderDataItem> items = default(List<OrderOrderDataItem>), Dictionary<string, OrderDataSubtotal> subtotals = default(Dictionary<string, OrderDataSubtotal>), Dictionary<string, OrderDataTotal> totals = default(Dictionary<string, OrderDataTotal>), string status = default(string), OrderCurrency currency = default(OrderCurrency), bool vatIncluded = default(bool))
         {
             // to ensure "tenantId" is required (not null)
             if (tenantId == null)
@@ -152,6 +153,7 @@ namespace order.Model
             this.Currency = currency;
             this.CreatedAt = createdAt;
             this.Channel = channel;
+            this.VatIncluded = vatIncluded;
         }
 
         /// <summary>
@@ -251,6 +253,12 @@ namespace order.Model
         public string Status { get; set; }
 
         /// <summary>
+        /// Gets or Sets VatIncluded
+        /// </summary>
+        [DataMember(Name = "vatIncluded", EmitDefaultValue = true)]
+        public bool VatIncluded { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -275,6 +283,7 @@ namespace order.Model
             sb.Append("  Totals: ").Append(Totals).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  VatIncluded: ").Append(VatIncluded).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

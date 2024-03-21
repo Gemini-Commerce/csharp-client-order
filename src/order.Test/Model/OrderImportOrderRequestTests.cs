@@ -207,5 +207,14 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'Currency'
         }
+
+        /// <summary>
+        /// Test the property 'VatIncluded'
+        /// </summary>
+        [Fact]
+        public void VatIncludedTest()
+        {
+            // TODO unit test for the property 'VatIncluded'
+        }
     }
 }
