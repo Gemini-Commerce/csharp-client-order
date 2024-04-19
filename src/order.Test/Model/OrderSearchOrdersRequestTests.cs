@@ -144,5 +144,23 @@ namespace order.Test.Model
         {
             // TODO unit test for the property 'AgentGrn'
         }
+
+        /// <summary>
+        /// Test the property 'UpdatedFrom'
+        /// </summary>
+        [Fact]
+        public void UpdatedFromTest()
+        {
+            // TODO unit test for the property 'UpdatedFrom'
+        }
+
+        /// <summary>
+        /// Test the property 'UpdatedTo'
+        /// </summary>
+        [Fact]
+        public void UpdatedToTest()
+        {
+            // TODO unit test for the property 'UpdatedTo'
+        }
     }
 }
