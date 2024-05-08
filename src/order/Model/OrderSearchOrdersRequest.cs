@@ -50,9 +50,9 @@ namespace order.Model
         /// <param name="toDate">toDate.</param>
         /// <param name="paymentFilter">paymentFilter.</param>
         /// <param name="agentGrn">agentGrn.</param>
-        /// <param name="updatedFrom">updatedFrom.</param>
-        /// <param name="updatedTo">updatedTo.</param>
-        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter), string agentGrn = default(string), DateTime updatedFrom = default(DateTime), DateTime updatedTo = default(DateTime))
+        /// <param name="updatedAtFrom">updatedAtFrom.</param>
+        /// <param name="updatedAtTo">updatedAtTo.</param>
+        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter), string agentGrn = default(string), DateTime updatedAtFrom = default(DateTime), DateTime updatedAtTo = default(DateTime))
         {
             // to ensure "tenantId" is required (not null)
             if (tenantId == null)
@@ -69,8 +69,8 @@ namespace order.Model
             this.ToDate = toDate;
             this.PaymentFilter = paymentFilter;
             this.AgentGrn = agentGrn;
-            this.UpdatedFrom = updatedFrom;
-            this.UpdatedTo = updatedTo;
+            this.UpdatedAtFrom = updatedAtFrom;
+            this.UpdatedAtTo = updatedAtTo;
         }
 
         /// <summary>
@@ -136,16 +136,16 @@ namespace order.Model
         public string AgentGrn { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdatedFrom
+        /// Gets or Sets UpdatedAtFrom
         /// </summary>
-        [DataMember(Name = "updatedFrom", EmitDefaultValue = false)]
-        public DateTime UpdatedFrom { get; set; }
+        [DataMember(Name = "updatedAtFrom", EmitDefaultValue = false)]
+        public DateTime UpdatedAtFrom { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdatedTo
+        /// Gets or Sets UpdatedAtTo
         /// </summary>
-        [DataMember(Name = "updatedTo", EmitDefaultValue = false)]
-        public DateTime UpdatedTo { get; set; }
+        [DataMember(Name = "updatedAtTo", EmitDefaultValue = false)]
+        public DateTime UpdatedAtTo { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -165,8 +165,8 @@ namespace order.Model
             sb.Append("  ToDate: ").Append(ToDate).Append("\n");
             sb.Append("  PaymentFilter: ").Append(PaymentFilter).Append("\n");
             sb.Append("  AgentGrn: ").Append(AgentGrn).Append("\n");
-            sb.Append("  UpdatedFrom: ").Append(UpdatedFrom).Append("\n");
-            sb.Append("  UpdatedTo: ").Append(UpdatedTo).Append("\n");
+            sb.Append("  UpdatedAtFrom: ").Append(UpdatedAtFrom).Append("\n");
+            sb.Append("  UpdatedAtTo: ").Append(UpdatedAtTo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

@@ -146,21 +146,21 @@ namespace order.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'UpdatedFrom'
+        /// Test the property 'UpdatedAtFrom'
         /// </summary>
         [Fact]
-        public void UpdatedFromTest()
+        public void UpdatedAtFromTest()
         {
-            // TODO unit test for the property 'UpdatedFrom'
+            // TODO unit test for the property 'UpdatedAtFrom'
         }
 
         /// <summary>
-        /// Test the property 'UpdatedTo'
+        /// Test the property 'UpdatedAtTo'
         /// </summary>
         [Fact]
-        public void UpdatedToTest()
+        public void UpdatedAtToTest()
         {
-            // TODO unit test for the property 'UpdatedTo'
+            // TODO unit test for the property 'UpdatedAtTo'
         }
     }
 }
