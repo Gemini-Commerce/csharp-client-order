@@ -52,7 +52,8 @@ namespace order.Model
         /// <param name="agentGrn">agentGrn.</param>
         /// <param name="updatedAtFrom">updatedAtFrom.</param>
         /// <param name="updatedAtTo">updatedAtTo.</param>
-        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter), string agentGrn = default(string), DateTime updatedAtFrom = default(DateTime), DateTime updatedAtTo = default(DateTime))
+        /// <param name="onHold">onHold.</param>
+        public OrderSearchOrdersRequest(string tenantId = default(string), string searchQuery = default(string), long pageSize = default(long), string pageToken = default(string), List<OrderOrderBy> orderBy = default(List<OrderOrderBy>), OrderStatusFilter statusFilter = default(OrderStatusFilter), DateTime fromDate = default(DateTime), DateTime toDate = default(DateTime), OrderPaymentFilter paymentFilter = default(OrderPaymentFilter), string agentGrn = default(string), DateTime updatedAtFrom = default(DateTime), DateTime updatedAtTo = default(DateTime), bool onHold = default(bool))
         {
             // to ensure "tenantId" is required (not null)
             if (tenantId == null)
@@ -71,6 +72,7 @@ namespace order.Model
             this.AgentGrn = agentGrn;
             this.UpdatedAtFrom = updatedAtFrom;
             this.UpdatedAtTo = updatedAtTo;
+            this.OnHold = onHold;
         }
 
         /// <summary>
@@ -148,6 +150,12 @@ namespace order.Model
         public DateTime UpdatedAtTo { get; set; }
 
         /// <summary>
+        /// Gets or Sets OnHold
+        /// </summary>
+        [DataMember(Name = "onHold", EmitDefaultValue = true)]
+        public bool OnHold { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -167,6 +175,7 @@ namespace order.Model
             sb.Append("  AgentGrn: ").Append(AgentGrn).Append("\n");
             sb.Append("  UpdatedAtFrom: ").Append(UpdatedAtFrom).Append("\n");
             sb.Append("  UpdatedAtTo: ").Append(UpdatedAtTo).Append("\n");
+            sb.Append("  OnHold: ").Append(OnHold).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
