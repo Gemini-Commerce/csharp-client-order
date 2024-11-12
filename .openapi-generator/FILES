@@ -2,6 +2,11 @@
 README.md
 api/openapi.yaml
 appveyor.yml
+docs/BehaviorOptionsInventory.md
+docs/BehaviorOptionsInventoryAction.md
+docs/BehaviorOptionsPaymentAction.md
+docs/CancelOrderRequestBehaviorOptions.md
+docs/CancelOrderRequestBehaviorOptionsPayment.md
 docs/CreateOrderRequestInitialPayment.md
 docs/ImportOrderRequestImportedPayment.md
 docs/InitialPaymentInitialTransaction.md
@@ -112,6 +117,11 @@ docs/ShipmentTracking.md
 docs/UpdateOrderRequestPayload.md
 git_push.sh
 order.sln
+src/order.Test/Model/BehaviorOptionsInventoryActionTests.cs
+src/order.Test/Model/BehaviorOptionsInventoryTests.cs
+src/order.Test/Model/BehaviorOptionsPaymentActionTests.cs
+src/order.Test/Model/CancelOrderRequestBehaviorOptionsPaymentTests.cs
+src/order.Test/Model/CancelOrderRequestBehaviorOptionsTests.cs
 src/order.Test/order.Test.csproj
 src/order/Api/OrderApi.cs
 src/order/Client/ApiClient.cs
@@ -134,6 +144,11 @@ src/order/Client/OpenAPIDateConverter.cs
 src/order/Client/RequestOptions.cs
 src/order/Client/RetryConfiguration.cs
 src/order/Model/AbstractOpenAPISchema.cs
+src/order/Model/BehaviorOptionsInventory.cs
+src/order/Model/BehaviorOptionsInventoryAction.cs
+src/order/Model/BehaviorOptionsPaymentAction.cs
+src/order/Model/CancelOrderRequestBehaviorOptions.cs
+src/order/Model/CancelOrderRequestBehaviorOptionsPayment.cs
 src/order/Model/CreateOrderRequestInitialPayment.cs
 src/order/Model/ImportOrderRequestImportedPayment.cs
 src/order/Model/InitialPaymentInitialTransaction.cs

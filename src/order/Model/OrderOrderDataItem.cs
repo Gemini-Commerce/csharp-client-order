@@ -38,6 +38,7 @@ namespace order.Model
         /// <param name="id">id.</param>
         /// <param name="productGrn">productGrn.</param>
         /// <param name="qtyOrdered">qtyOrdered.</param>
+        /// <param name="freeQty">freeQty.</param>
         /// <param name="qtyCommitted">qtyCommitted.</param>
         /// <param name="unitSalePrice">unitSalePrice.</param>
         /// <param name="unitListPrice">unitListPrice.</param>
@@ -63,11 +64,12 @@ namespace order.Model
         /// <param name="promotionGrn">promotionGrn.</param>
         /// <param name="productIsVirtual">productIsVirtual.</param>
         /// <param name="productConfiguration">productConfiguration.</param>
-        public OrderOrderDataItem(string id = default(string), string productGrn = default(string), long qtyOrdered = default(long), long qtyCommitted = default(long), OrderMoney unitSalePrice = default(OrderMoney), OrderMoney unitListPrice = default(OrderMoney), OrderMoney unitBasePrice = default(OrderMoney), OrderMoney unitVatAmount = default(OrderMoney), OrderMoney rowSalePrice = default(OrderMoney), OrderMoney rowListPrice = default(OrderMoney), OrderMoney rowVatAmount = default(OrderMoney), OrderMoney discountAmount = default(OrderMoney), OrderMoney rowBasePrice = default(OrderMoney), OrderMoney unitCustomPrice = default(OrderMoney), OrderMoney rowCustomPrice = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), string productName = default(string), string productCode = default(string), string productSku = default(string), string productOptions = default(string), string productImg = default(string), string productData = default(string), string shipmentInfoReference = default(string), List<string> promotionGrn = default(List<string>), bool productIsVirtual = default(bool), List<ItemProductConfigurationStep> productConfiguration = default(List<ItemProductConfigurationStep>))
+        public OrderOrderDataItem(string id = default(string), string productGrn = default(string), long qtyOrdered = default(long), long freeQty = default(long), long qtyCommitted = default(long), OrderMoney unitSalePrice = default(OrderMoney), OrderMoney unitListPrice = default(OrderMoney), OrderMoney unitBasePrice = default(OrderMoney), OrderMoney unitVatAmount = default(OrderMoney), OrderMoney rowSalePrice = default(OrderMoney), OrderMoney rowListPrice = default(OrderMoney), OrderMoney rowVatAmount = default(OrderMoney), OrderMoney discountAmount = default(OrderMoney), OrderMoney rowBasePrice = default(OrderMoney), OrderMoney unitCustomPrice = default(OrderMoney), OrderMoney rowCustomPrice = default(OrderMoney), float vatPercentage = default(float), bool vatInaccurate = default(bool), bool vatCalculated = default(bool), string productName = default(string), string productCode = default(string), string productSku = default(string), string productOptions = default(string), string productImg = default(string), string productData = default(string), string shipmentInfoReference = default(string), List<string> promotionGrn = default(List<string>), bool productIsVirtual = default(bool), List<ItemProductConfigurationStep> productConfiguration = default(List<ItemProductConfigurationStep>))
         {
             this.Id = id;
             this.ProductGrn = productGrn;
             this.QtyOrdered = qtyOrdered;
+            this.FreeQty = freeQty;
             this.QtyCommitted = qtyCommitted;
             this.UnitSalePrice = unitSalePrice;
             this.UnitListPrice = unitListPrice;
@@ -112,6 +114,12 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "qtyOrdered", EmitDefaultValue = false)]
         public long QtyOrdered { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FreeQty
+        /// </summary>
+        [DataMember(Name = "freeQty", EmitDefaultValue = false)]
+        public long FreeQty { get; set; }
 
         /// <summary>
         /// Gets or Sets QtyCommitted
@@ -274,6 +282,7 @@ namespace order.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ProductGrn: ").Append(ProductGrn).Append("\n");
             sb.Append("  QtyOrdered: ").Append(QtyOrdered).Append("\n");
+            sb.Append("  FreeQty: ").Append(FreeQty).Append("\n");
             sb.Append("  QtyCommitted: ").Append(QtyCommitted).Append("\n");
             sb.Append("  UnitSalePrice: ").Append(UnitSalePrice).Append("\n");
             sb.Append("  UnitListPrice: ").Append(UnitListPrice).Append("\n");

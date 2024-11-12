@@ -43,7 +43,8 @@ namespace order.Model
         /// <param name="tenantId">tenantId (required).</param>
         /// <param name="orderId">orderId (required).</param>
         /// <param name="reason">reason.</param>
-        public OrderCancelOrderRequest(string tenantId = default(string), string orderId = default(string), string reason = default(string))
+        /// <param name="options">options.</param>
+        public OrderCancelOrderRequest(string tenantId = default(string), string orderId = default(string), string reason = default(string), CancelOrderRequestBehaviorOptions options = default(CancelOrderRequestBehaviorOptions))
         {
             // to ensure "tenantId" is required (not null)
             if (tenantId == null)
@@ -58,6 +59,7 @@ namespace order.Model
             }
             this.OrderId = orderId;
             this.Reason = reason;
+            this.Options = options;
         }
 
         /// <summary>
@@ -79,6 +81,12 @@ namespace order.Model
         public string Reason { get; set; }
 
         /// <summary>
+        /// Gets or Sets Options
+        /// </summary>
+        [DataMember(Name = "options", EmitDefaultValue = false)]
+        public CancelOrderRequestBehaviorOptions Options { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -89,6 +97,7 @@ namespace order.Model
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  OrderId: ").Append(OrderId).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
+            sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

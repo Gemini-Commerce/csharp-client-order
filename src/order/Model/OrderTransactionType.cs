@@ -84,7 +84,13 @@ namespace order.Model
         /// Enum FRAUD for value: FRAUD
         /// </summary>
         [EnumMember(Value = "FRAUD")]
-        FRAUD
+        FRAUD,
+
+        /// <summary>
+        /// Enum NOOP for value: NOOP
+        /// </summary>
+        [EnumMember(Value = "NOOP")]
+        NOOP
     }
 
 }

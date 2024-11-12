@@ -174,6 +174,11 @@ Class | Method | HTTP request | Description
 <a id="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.BehaviorOptionsInventory](docs/BehaviorOptionsInventory.md)
+ - [Model.BehaviorOptionsInventoryAction](docs/BehaviorOptionsInventoryAction.md)
+ - [Model.BehaviorOptionsPaymentAction](docs/BehaviorOptionsPaymentAction.md)
+ - [Model.CancelOrderRequestBehaviorOptions](docs/CancelOrderRequestBehaviorOptions.md)
+ - [Model.CancelOrderRequestBehaviorOptionsPayment](docs/CancelOrderRequestBehaviorOptionsPayment.md)
  - [Model.CreateOrderRequestInitialPayment](docs/CreateOrderRequestInitialPayment.md)
  - [Model.ImportOrderRequestImportedPayment](docs/ImportOrderRequestImportedPayment.md)
  - [Model.InitialPaymentInitialTransaction](docs/InitialPaymentInitialTransaction.md)
