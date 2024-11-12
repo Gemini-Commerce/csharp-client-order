@@ -117,11 +117,6 @@ docs/ShipmentTracking.md
 docs/UpdateOrderRequestPayload.md
 git_push.sh
 order.sln
-src/order.Test/Model/BehaviorOptionsInventoryActionTests.cs
-src/order.Test/Model/BehaviorOptionsInventoryTests.cs
-src/order.Test/Model/BehaviorOptionsPaymentActionTests.cs
-src/order.Test/Model/CancelOrderRequestBehaviorOptionsPaymentTests.cs
-src/order.Test/Model/CancelOrderRequestBehaviorOptionsTests.cs
 src/order.Test/order.Test.csproj
 src/order/Api/OrderApi.cs
 src/order/Client/ApiClient.cs
