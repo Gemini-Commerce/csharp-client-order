@@ -55,6 +55,7 @@ namespace order.Model
             this.ReturnAddress = returnAddress;
             this.Tracking = tracking;
             this.ReturnTracking = returnTracking;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -140,6 +141,12 @@ namespace order.Model
         public List<ShipmentTracking> ReturnTracking { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -158,6 +165,7 @@ namespace order.Model
             sb.Append("  ReturnAddress: ").Append(ReturnAddress).Append("\n");
             sb.Append("  Tracking: ").Append(Tracking).Append("\n");
             sb.Append("  ReturnTracking: ").Append(ReturnTracking).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,7 +184,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

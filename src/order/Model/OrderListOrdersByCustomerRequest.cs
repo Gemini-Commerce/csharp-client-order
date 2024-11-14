@@ -36,7 +36,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="OrderListOrdersByCustomerRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderListOrdersByCustomerRequest() { }
+        protected OrderListOrdersByCustomerRequest()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderListOrdersByCustomerRequest" /> class.
         /// </summary>
@@ -62,6 +65,7 @@ namespace order.Model
             this.PageSize = pageSize;
             this.PageToken = pageToken;
             this.OrderBy = orderBy;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -97,6 +101,12 @@ namespace order.Model
         public List<OrderOrderBy> OrderBy { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -109,6 +119,7 @@ namespace order.Model
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageToken: ").Append(PageToken).Append("\n");
             sb.Append("  OrderBy: ").Append(OrderBy).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,7 +138,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

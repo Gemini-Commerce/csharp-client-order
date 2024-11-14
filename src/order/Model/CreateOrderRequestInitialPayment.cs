@@ -36,7 +36,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="CreateOrderRequestInitialPayment" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected CreateOrderRequestInitialPayment() { }
+        protected CreateOrderRequestInitialPayment()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateOrderRequestInitialPayment" /> class.
         /// </summary>
@@ -62,6 +65,7 @@ namespace order.Model
             this.AdditionalInfo = additionalInfo;
             this.CcInfo = ccInfo;
             this.Transaction = transaction;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -95,6 +99,12 @@ namespace order.Model
         public InitialPaymentInitialTransaction Transaction { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +117,7 @@ namespace order.Model
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  CcInfo: ").Append(CcInfo).Append("\n");
             sb.Append("  Transaction: ").Append(Transaction).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,7 +136,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -42,7 +42,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="OrderDataSubtotal" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderDataSubtotal() { }
+        protected OrderDataSubtotal()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataSubtotal" /> class.
         /// </summary>
@@ -57,6 +60,7 @@ namespace order.Model
                 throw new ArgumentNullException("value is a required property for OrderDataSubtotal and cannot be null");
             }
             this.Value = value;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -64,6 +68,12 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "value", IsRequired = true, EmitDefaultValue = true)]
         public OrderMoney Value { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,6 +85,7 @@ namespace order.Model
             sb.Append("class OrderDataSubtotal {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,7 +104,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

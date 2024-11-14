@@ -42,7 +42,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="OrderOrderData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderOrderData() { }
+        protected OrderOrderData()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderOrderData" /> class.
         /// </summary>
@@ -101,6 +104,7 @@ namespace order.Model
             this.HistoryEvents = historyEvents;
             this.Notes = notes;
             this.IsDeleted = isDeleted;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -356,6 +360,12 @@ namespace order.Model
             return false;
         }
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -395,6 +405,7 @@ namespace order.Model
             sb.Append("  IsDeleted: ").Append(IsDeleted).Append("\n");
             sb.Append("  InsertedAt: ").Append(InsertedAt).Append("\n");
             sb.Append("  DeletedAt: ").Append(DeletedAt).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -413,7 +424,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

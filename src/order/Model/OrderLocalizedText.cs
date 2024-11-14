@@ -39,6 +39,7 @@ namespace order.Model
         public OrderLocalizedText(Dictionary<string, string> value = default(Dictionary<string, string>))
         {
             this.Value = value;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -46,6 +47,12 @@ namespace order.Model
         /// </summary>
         [DataMember(Name = "value", EmitDefaultValue = false)]
         public Dictionary<string, string> Value { get; set; }
+
+        /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,6 +63,7 @@ namespace order.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class OrderLocalizedText {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -74,7 +82,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

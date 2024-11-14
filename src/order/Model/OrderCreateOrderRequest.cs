@@ -42,7 +42,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="OrderCreateOrderRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderCreateOrderRequest() { }
+        protected OrderCreateOrderRequest()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderCreateOrderRequest" /> class.
         /// </summary>
@@ -138,6 +141,7 @@ namespace order.Model
             this.CartGrn = cartGrn;
             this.OnHold = onHold;
             this.Notes = notes;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -255,6 +259,12 @@ namespace order.Model
         public string Notes { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -282,6 +292,7 @@ namespace order.Model
             sb.Append("  CartGrn: ").Append(CartGrn).Append("\n");
             sb.Append("  OnHold: ").Append(OnHold).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -300,7 +311,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

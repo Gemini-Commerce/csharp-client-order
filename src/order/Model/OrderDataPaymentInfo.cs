@@ -36,7 +36,10 @@ namespace order.Model
         /// Initializes a new instance of the <see cref="OrderDataPaymentInfo" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderDataPaymentInfo() { }
+        protected OrderDataPaymentInfo()
+        {
+            this.AdditionalProperties = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrderDataPaymentInfo" /> class.
         /// </summary>
@@ -72,6 +75,7 @@ namespace order.Model
             this.VatCalculated = vatCalculated;
             this.Title = title;
             this.Label = label;
+            this.AdditionalProperties = new Dictionary<string, object>();
         }
 
         /// <summary>
@@ -135,6 +139,12 @@ namespace order.Model
         public OrderLocalizedText Label { get; set; }
 
         /// <summary>
+        /// Gets or Sets additional properties
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> AdditionalProperties { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -152,6 +162,7 @@ namespace order.Model
             sb.Append("  VatCalculated: ").Append(VatCalculated).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -170,7 +181,7 @@ namespace order.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

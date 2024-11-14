@@ -1068,7 +1068,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ApproveOrderAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ApproveOrderAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Approve Order
@@ -1081,7 +1081,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ApproveOrderWithHttpInfoAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ApproveOrderWithHttpInfoAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Assign Shipment
         /// </summary>
@@ -1093,7 +1093,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AssignShipmentAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> AssignShipmentAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Assign Shipment
@@ -1106,7 +1106,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AssignShipmentWithHttpInfoAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> AssignShipmentWithHttpInfoAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Calculate Refund
         /// </summary>
@@ -1118,7 +1118,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCalculateRefundResponse</returns>
-        System.Threading.Tasks.Task<OrderCalculateRefundResponse> CalculateRefundAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderCalculateRefundResponse> CalculateRefundAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Calculate Refund
@@ -1131,7 +1131,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCalculateRefundResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderCalculateRefundResponse>> CalculateRefundWithHttpInfoAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderCalculateRefundResponse>> CalculateRefundWithHttpInfoAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Cancel Fulfillment
         /// </summary>
@@ -1143,7 +1143,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CancelFulfillmentAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> CancelFulfillmentAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Fulfillment
@@ -1156,7 +1156,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelFulfillmentWithHttpInfoAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelFulfillmentWithHttpInfoAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Cancel Order
         /// </summary>
@@ -1168,7 +1168,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CancelOrderAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> CancelOrderAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Order
@@ -1181,7 +1181,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelOrderWithHttpInfoAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelOrderWithHttpInfoAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Cancel Shipment
         /// </summary>
@@ -1193,7 +1193,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CancelShipmentAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> CancelShipmentAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Cancel Shipment
@@ -1206,7 +1206,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CancelShipmentWithHttpInfoAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelShipmentWithHttpInfoAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Complete Shipment Packing
         /// </summary>
@@ -1218,7 +1218,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> CompleteShipmentPackingAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> CompleteShipmentPackingAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Complete Shipment Packing
@@ -1231,7 +1231,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteShipmentPackingWithHttpInfoAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteShipmentPackingWithHttpInfoAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Fulfillment
         /// </summary>
@@ -1243,7 +1243,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFulfillment</returns>
-        System.Threading.Tasks.Task<OrderFulfillment> CreateFulfillmentAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderFulfillment> CreateFulfillmentAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Fulfillment
@@ -1256,7 +1256,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFulfillment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderFulfillment>> CreateFulfillmentWithHttpInfoAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderFulfillment>> CreateFulfillmentWithHttpInfoAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Order
         /// </summary>
@@ -1268,7 +1268,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> CreateOrderAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> CreateOrderAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Order
@@ -1281,7 +1281,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> CreateOrderWithHttpInfoAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> CreateOrderWithHttpInfoAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Order History
         /// </summary>
@@ -1293,7 +1293,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderDataHistory</returns>
-        System.Threading.Tasks.Task<OrderDataHistory> CreateOrderHistoryAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderDataHistory> CreateOrderHistoryAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Order History
@@ -1306,7 +1306,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderDataHistory)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderDataHistory>> CreateOrderHistoryWithHttpInfoAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderDataHistory>> CreateOrderHistoryWithHttpInfoAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Payment
         /// </summary>
@@ -1318,7 +1318,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        System.Threading.Tasks.Task<OrderPayment> CreatePaymentAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderPayment> CreatePaymentAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Payment
@@ -1331,7 +1331,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> CreatePaymentWithHttpInfoAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> CreatePaymentWithHttpInfoAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Payment Transaction
         /// </summary>
@@ -1343,7 +1343,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        System.Threading.Tasks.Task<OrderTransaction> CreatePaymentTransactionAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderTransaction> CreatePaymentTransactionAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Payment Transaction
@@ -1356,7 +1356,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> CreatePaymentTransactionWithHttpInfoAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> CreatePaymentTransactionWithHttpInfoAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Refund
         /// </summary>
@@ -1368,7 +1368,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderRefund</returns>
-        System.Threading.Tasks.Task<OrderRefund> CreateRefundAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderRefund> CreateRefundAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Refund
@@ -1381,7 +1381,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderRefund)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderRefund>> CreateRefundWithHttpInfoAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderRefund>> CreateRefundWithHttpInfoAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Refund Transaction
         /// </summary>
@@ -1393,7 +1393,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        System.Threading.Tasks.Task<OrderTransaction> CreateRefundTransactionAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderTransaction> CreateRefundTransactionAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Refund Transaction
@@ -1406,7 +1406,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> CreateRefundTransactionWithHttpInfoAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> CreateRefundTransactionWithHttpInfoAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Create Shipment
         /// </summary>
@@ -1418,7 +1418,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipment</returns>
-        System.Threading.Tasks.Task<OrderShipment> CreateShipmentAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderShipment> CreateShipmentAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Create Shipment
@@ -1431,7 +1431,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderShipment>> CreateShipmentWithHttpInfoAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderShipment>> CreateShipmentWithHttpInfoAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Delete Order
         /// </summary>
@@ -1443,7 +1443,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DeleteOrderAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> DeleteOrderAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete Order
@@ -1456,7 +1456,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrderWithHttpInfoAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrderWithHttpInfoAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Fulfillment
         /// </summary>
@@ -1468,7 +1468,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFulfillment</returns>
-        System.Threading.Tasks.Task<OrderFulfillment> GetFulfillmentAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderFulfillment> GetFulfillmentAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Fulfillment
@@ -1481,7 +1481,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFulfillment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderFulfillment>> GetFulfillmentWithHttpInfoAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderFulfillment>> GetFulfillmentWithHttpInfoAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Order
         /// </summary>
@@ -1493,7 +1493,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> GetOrderAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> GetOrderAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Order
@@ -1506,7 +1506,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderWithHttpInfoAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderWithHttpInfoAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Order by Cart ID
         /// </summary>
@@ -1518,7 +1518,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> GetOrderByCartIdAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> GetOrderByCartIdAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Order by Cart ID
@@ -1531,7 +1531,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderByCartIdWithHttpInfoAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderByCartIdWithHttpInfoAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Order by Order Number
         /// </summary>
@@ -1543,7 +1543,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> GetOrderByOrderNumberAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> GetOrderByOrderNumberAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Order by Order Number
@@ -1556,7 +1556,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderByOrderNumberWithHttpInfoAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> GetOrderByOrderNumberWithHttpInfoAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Payment
         /// </summary>
@@ -1568,7 +1568,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        System.Threading.Tasks.Task<OrderPayment> GetPaymentAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderPayment> GetPaymentAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Payment
@@ -1581,7 +1581,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> GetPaymentWithHttpInfoAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> GetPaymentWithHttpInfoAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Shipment
         /// </summary>
@@ -1593,7 +1593,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipment</returns>
-        System.Threading.Tasks.Task<OrderShipment> GetShipmentAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderShipment> GetShipmentAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Shipment
@@ -1606,7 +1606,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderShipment>> GetShipmentWithHttpInfoAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderShipment>> GetShipmentWithHttpInfoAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Get Transaction
         /// </summary>
@@ -1618,7 +1618,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        System.Threading.Tasks.Task<OrderTransaction> GetTransactionAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderTransaction> GetTransactionAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Transaction
@@ -1631,7 +1631,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> GetTransactionWithHttpInfoAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderTransaction>> GetTransactionWithHttpInfoAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Hold Order
         /// </summary>
@@ -1643,7 +1643,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> HoldOrderAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> HoldOrderAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Hold Order
@@ -1656,7 +1656,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> HoldOrderWithHttpInfoAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> HoldOrderWithHttpInfoAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Import Order
         /// </summary>
@@ -1668,7 +1668,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> ImportOrderAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> ImportOrderAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Import Order
@@ -1681,7 +1681,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> ImportOrderWithHttpInfoAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> ImportOrderWithHttpInfoAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Fulfillments
         /// </summary>
@@ -1693,7 +1693,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListFulfillmentsResponse</returns>
-        System.Threading.Tasks.Task<OrderListFulfillmentsResponse> ListFulfillmentsAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderListFulfillmentsResponse> ListFulfillmentsAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Fulfillments
@@ -1706,7 +1706,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListFulfillmentsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderListFulfillmentsResponse>> ListFulfillmentsWithHttpInfoAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderListFulfillmentsResponse>> ListFulfillmentsWithHttpInfoAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Orders
         /// </summary>
@@ -1718,7 +1718,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersResponse</returns>
-        System.Threading.Tasks.Task<OrderListOrdersResponse> ListOrdersAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderListOrdersResponse> ListOrdersAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Orders
@@ -1731,7 +1731,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersResponse>> ListOrdersWithHttpInfoAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersResponse>> ListOrdersWithHttpInfoAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Orders by Customer
         /// </summary>
@@ -1743,7 +1743,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersByCustomerResponse</returns>
-        System.Threading.Tasks.Task<OrderListOrdersByCustomerResponse> ListOrdersByCustomerAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderListOrdersByCustomerResponse> ListOrdersByCustomerAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Orders by Customer
@@ -1756,7 +1756,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersByCustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersByCustomerResponse>> ListOrdersByCustomerWithHttpInfoAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersByCustomerResponse>> ListOrdersByCustomerWithHttpInfoAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Orders by Numbers
         /// </summary>
@@ -1768,7 +1768,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersByNumbersResponse</returns>
-        System.Threading.Tasks.Task<OrderListOrdersByNumbersResponse> ListOrdersByNumbersAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderListOrdersByNumbersResponse> ListOrdersByNumbersAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Orders by Numbers
@@ -1781,7 +1781,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersByNumbersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersByNumbersResponse>> ListOrdersByNumbersWithHttpInfoAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderListOrdersByNumbersResponse>> ListOrdersByNumbersWithHttpInfoAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// List Shipments
         /// </summary>
@@ -1793,7 +1793,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListShipmentsResponse</returns>
-        System.Threading.Tasks.Task<OrderListShipmentsResponse> ListShipmentsAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderListShipmentsResponse> ListShipmentsAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// List Shipments
@@ -1806,7 +1806,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListShipmentsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderListShipmentsResponse>> ListShipmentsWithHttpInfoAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderListShipmentsResponse>> ListShipmentsWithHttpInfoAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Documents
         /// </summary>
@@ -1818,7 +1818,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Documents
@@ -1831,7 +1831,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1843,7 +1843,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1856,7 +1856,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Print Orders Labels
         /// </summary>
@@ -1868,7 +1868,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPrintOrdersLabelsResponse</returns>
-        System.Threading.Tasks.Task<OrderPrintOrdersLabelsResponse> PrintOrdersLabelsAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderPrintOrdersLabelsResponse> PrintOrdersLabelsAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Print Orders Labels
@@ -1881,7 +1881,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPrintOrdersLabelsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderPrintOrdersLabelsResponse>> PrintOrdersLabelsWithHttpInfoAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderPrintOrdersLabelsResponse>> PrintOrdersLabelsWithHttpInfoAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Quash Fulfillment
         /// </summary>
@@ -1893,7 +1893,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> QuashFulfillmentAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> QuashFulfillmentAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Quash Fulfillment
@@ -1906,7 +1906,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> QuashFulfillmentWithHttpInfoAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> QuashFulfillmentWithHttpInfoAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Quash Shipment
         /// </summary>
@@ -1918,7 +1918,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> QuashShipmentAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> QuashShipmentAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Quash Shipment
@@ -1931,7 +1931,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> QuashShipmentWithHttpInfoAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> QuashShipmentWithHttpInfoAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Receive Fulfillment
         /// </summary>
@@ -1943,7 +1943,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReceiveFulfillmentAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReceiveFulfillmentAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Receive Fulfillment
@@ -1956,7 +1956,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReceiveFulfillmentWithHttpInfoAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReceiveFulfillmentWithHttpInfoAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Report Fulfillment Error
         /// </summary>
@@ -1968,7 +1968,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReportFulfillmentErrorAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReportFulfillmentErrorAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Report Fulfillment Error
@@ -1981,7 +1981,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentErrorWithHttpInfoAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentErrorWithHttpInfoAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Report Fulfillment Not Resolvable
         /// </summary>
@@ -1993,7 +1993,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReportFulfillmentNotResolvableAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReportFulfillmentNotResolvableAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Report Fulfillment Not Resolvable
@@ -2006,7 +2006,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentNotResolvableWithHttpInfoAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentNotResolvableWithHttpInfoAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Report Fulfillment Ready
         /// </summary>
@@ -2018,7 +2018,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReportFulfillmentReadyAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReportFulfillmentReadyAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Report Fulfillment Ready
@@ -2031,7 +2031,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentReadyWithHttpInfoAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportFulfillmentReadyWithHttpInfoAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Report Shipment Delivery
         /// </summary>
@@ -2043,7 +2043,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReportShipmentDeliveryAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReportShipmentDeliveryAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Report Shipment Delivery
@@ -2056,7 +2056,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportShipmentDeliveryWithHttpInfoAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportShipmentDeliveryWithHttpInfoAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Report Shipment Missing Stock
         /// </summary>
@@ -2068,7 +2068,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReportShipmentMissingStockAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ReportShipmentMissingStockAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Report Shipment Missing Stock
@@ -2081,7 +2081,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReportShipmentMissingStockWithHttpInfoAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReportShipmentMissingStockWithHttpInfoAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Resolve Shipment Missing Stock
         /// </summary>
@@ -2093,7 +2093,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ResolveShipmentMissingStockAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> ResolveShipmentMissingStockAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Resolve Shipment Missing Stock
@@ -2106,7 +2106,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResolveShipmentMissingStockWithHttpInfoAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ResolveShipmentMissingStockWithHttpInfoAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Retry Fulfillment
         /// </summary>
@@ -2118,7 +2118,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> RetryFulfillmentAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> RetryFulfillmentAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Retry Fulfillment
@@ -2131,7 +2131,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RetryFulfillmentWithHttpInfoAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> RetryFulfillmentWithHttpInfoAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Search Orders
         /// </summary>
@@ -2143,7 +2143,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSearchOrdersResponse</returns>
-        System.Threading.Tasks.Task<OrderSearchOrdersResponse> SearchOrdersAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderSearchOrdersResponse> SearchOrdersAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Search Orders
@@ -2156,7 +2156,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSearchOrdersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderSearchOrdersResponse>> SearchOrdersWithHttpInfoAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderSearchOrdersResponse>> SearchOrdersWithHttpInfoAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Send Fulfillment
         /// </summary>
@@ -2168,7 +2168,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SendFulfillmentAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> SendFulfillmentAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Send Fulfillment
@@ -2181,7 +2181,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SendFulfillmentWithHttpInfoAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendFulfillmentWithHttpInfoAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Send Order Notification
         /// </summary>
@@ -2193,7 +2193,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SendOrderNotificationAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> SendOrderNotificationAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Send Order Notification
@@ -2206,7 +2206,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SendOrderNotificationWithHttpInfoAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendOrderNotificationWithHttpInfoAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Start Fulfillment Processing
         /// </summary>
@@ -2218,7 +2218,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> StartFulfillmentProcessingAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> StartFulfillmentProcessingAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Start Fulfillment Processing
@@ -2231,7 +2231,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StartFulfillmentProcessingWithHttpInfoAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> StartFulfillmentProcessingWithHttpInfoAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Start Shipment Processing
         /// </summary>
@@ -2243,7 +2243,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> StartShipmentProcessingAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> StartShipmentProcessingAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Start Shipment Processing
@@ -2256,7 +2256,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StartShipmentProcessingWithHttpInfoAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> StartShipmentProcessingWithHttpInfoAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Unhold Order
         /// </summary>
@@ -2268,7 +2268,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UnholdOrderAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Object> UnholdOrderAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Unhold Order
@@ -2281,7 +2281,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnholdOrderWithHttpInfoAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnholdOrderWithHttpInfoAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Order
         /// </summary>
@@ -2293,7 +2293,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        System.Threading.Tasks.Task<OrderOrderData> UpdateOrderAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderOrderData> UpdateOrderAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Order
@@ -2306,7 +2306,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> UpdateOrderWithHttpInfoAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderOrderData>> UpdateOrderWithHttpInfoAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// Update Payment
         /// </summary>
@@ -2318,7 +2318,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        System.Threading.Tasks.Task<OrderPayment> UpdatePaymentAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OrderPayment> UpdatePaymentAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Update Payment
@@ -2331,7 +2331,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> UpdatePaymentWithHttpInfoAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OrderPayment>> UpdatePaymentWithHttpInfoAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2536,7 +2536,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ApproveOrderAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ApproveOrderAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ApproveOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2550,7 +2550,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ApproveOrderWithHttpInfoAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ApproveOrderWithHttpInfoAsync(OrderApproveOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2692,7 +2692,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AssignShipmentAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> AssignShipmentAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await AssignShipmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2706,7 +2706,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> AssignShipmentWithHttpInfoAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> AssignShipmentWithHttpInfoAsync(OrderAssignShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2848,7 +2848,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderCalculateRefundResponse</returns>
-        public async System.Threading.Tasks.Task<OrderCalculateRefundResponse> CalculateRefundAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderCalculateRefundResponse> CalculateRefundAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderCalculateRefundResponse> localVarResponse = await CalculateRefundWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2862,7 +2862,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderCalculateRefundResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderCalculateRefundResponse>> CalculateRefundWithHttpInfoAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderCalculateRefundResponse>> CalculateRefundWithHttpInfoAsync(OrderCalculateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3004,7 +3004,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CancelFulfillmentAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> CancelFulfillmentAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await CancelFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3018,7 +3018,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelFulfillmentWithHttpInfoAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelFulfillmentWithHttpInfoAsync(OrderCancelFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3160,7 +3160,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CancelOrderAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> CancelOrderAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await CancelOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3174,7 +3174,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelOrderWithHttpInfoAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelOrderWithHttpInfoAsync(OrderCancelOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3316,7 +3316,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CancelShipmentAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> CancelShipmentAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await CancelShipmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3330,7 +3330,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelShipmentWithHttpInfoAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CancelShipmentWithHttpInfoAsync(OrderCancelShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3472,7 +3472,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> CompleteShipmentPackingAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> CompleteShipmentPackingAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await CompleteShipmentPackingWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3486,7 +3486,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CompleteShipmentPackingWithHttpInfoAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> CompleteShipmentPackingWithHttpInfoAsync(OrderCompleteShipmentPackingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3628,7 +3628,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFulfillment</returns>
-        public async System.Threading.Tasks.Task<OrderFulfillment> CreateFulfillmentAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderFulfillment> CreateFulfillmentAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderFulfillment> localVarResponse = await CreateFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3642,7 +3642,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFulfillment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderFulfillment>> CreateFulfillmentWithHttpInfoAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderFulfillment>> CreateFulfillmentWithHttpInfoAsync(OrderCreateFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3784,7 +3784,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> CreateOrderAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> CreateOrderAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await CreateOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3798,7 +3798,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> CreateOrderWithHttpInfoAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> CreateOrderWithHttpInfoAsync(OrderCreateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -3940,7 +3940,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderDataHistory</returns>
-        public async System.Threading.Tasks.Task<OrderDataHistory> CreateOrderHistoryAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderDataHistory> CreateOrderHistoryAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderDataHistory> localVarResponse = await CreateOrderHistoryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3954,7 +3954,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderDataHistory)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderDataHistory>> CreateOrderHistoryWithHttpInfoAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderDataHistory>> CreateOrderHistoryWithHttpInfoAsync(OrderCreateHistoryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4096,7 +4096,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        public async System.Threading.Tasks.Task<OrderPayment> CreatePaymentAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderPayment> CreatePaymentAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderPayment> localVarResponse = await CreatePaymentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4110,7 +4110,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> CreatePaymentWithHttpInfoAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> CreatePaymentWithHttpInfoAsync(OrderCreatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4252,7 +4252,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        public async System.Threading.Tasks.Task<OrderTransaction> CreatePaymentTransactionAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderTransaction> CreatePaymentTransactionAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderTransaction> localVarResponse = await CreatePaymentTransactionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4266,7 +4266,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> CreatePaymentTransactionWithHttpInfoAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> CreatePaymentTransactionWithHttpInfoAsync(OrderCreatePaymentTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4408,7 +4408,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderRefund</returns>
-        public async System.Threading.Tasks.Task<OrderRefund> CreateRefundAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderRefund> CreateRefundAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderRefund> localVarResponse = await CreateRefundWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4422,7 +4422,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderRefund)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderRefund>> CreateRefundWithHttpInfoAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderRefund>> CreateRefundWithHttpInfoAsync(OrderCreateRefundRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4564,7 +4564,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        public async System.Threading.Tasks.Task<OrderTransaction> CreateRefundTransactionAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderTransaction> CreateRefundTransactionAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderTransaction> localVarResponse = await CreateRefundTransactionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4578,7 +4578,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> CreateRefundTransactionWithHttpInfoAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> CreateRefundTransactionWithHttpInfoAsync(OrderCreateRefundTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4720,7 +4720,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipment</returns>
-        public async System.Threading.Tasks.Task<OrderShipment> CreateShipmentAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderShipment> CreateShipmentAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderShipment> localVarResponse = await CreateShipmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4734,7 +4734,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderShipment>> CreateShipmentWithHttpInfoAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderShipment>> CreateShipmentWithHttpInfoAsync(OrderCreateShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -4876,7 +4876,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DeleteOrderAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> DeleteOrderAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await DeleteOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4890,7 +4890,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> DeleteOrderWithHttpInfoAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> DeleteOrderWithHttpInfoAsync(OrderDeleteOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5032,7 +5032,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderFulfillment</returns>
-        public async System.Threading.Tasks.Task<OrderFulfillment> GetFulfillmentAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderFulfillment> GetFulfillmentAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderFulfillment> localVarResponse = await GetFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5046,7 +5046,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderFulfillment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderFulfillment>> GetFulfillmentWithHttpInfoAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderFulfillment>> GetFulfillmentWithHttpInfoAsync(OrderGetFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5188,7 +5188,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await GetOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5202,7 +5202,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderWithHttpInfoAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderWithHttpInfoAsync(OrderGetOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5344,7 +5344,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderByCartIdAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderByCartIdAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await GetOrderByCartIdWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5358,7 +5358,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderByCartIdWithHttpInfoAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderByCartIdWithHttpInfoAsync(OrderGetOrderByCartIdRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5500,7 +5500,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderByOrderNumberAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> GetOrderByOrderNumberAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await GetOrderByOrderNumberWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5514,7 +5514,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderByOrderNumberWithHttpInfoAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> GetOrderByOrderNumberWithHttpInfoAsync(OrderGetOrderByOrderNumberRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5656,7 +5656,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        public async System.Threading.Tasks.Task<OrderPayment> GetPaymentAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderPayment> GetPaymentAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderPayment> localVarResponse = await GetPaymentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5670,7 +5670,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> GetPaymentWithHttpInfoAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> GetPaymentWithHttpInfoAsync(OrderGetPaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5812,7 +5812,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderShipment</returns>
-        public async System.Threading.Tasks.Task<OrderShipment> GetShipmentAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderShipment> GetShipmentAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderShipment> localVarResponse = await GetShipmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5826,7 +5826,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderShipment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderShipment>> GetShipmentWithHttpInfoAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderShipment>> GetShipmentWithHttpInfoAsync(OrderGetShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -5968,7 +5968,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderTransaction</returns>
-        public async System.Threading.Tasks.Task<OrderTransaction> GetTransactionAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderTransaction> GetTransactionAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderTransaction> localVarResponse = await GetTransactionWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5982,7 +5982,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderTransaction)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> GetTransactionWithHttpInfoAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderTransaction>> GetTransactionWithHttpInfoAsync(OrderGetTransactionRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6124,7 +6124,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> HoldOrderAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> HoldOrderAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await HoldOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6138,7 +6138,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> HoldOrderWithHttpInfoAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> HoldOrderWithHttpInfoAsync(OrderHoldOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6280,7 +6280,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> ImportOrderAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> ImportOrderAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await ImportOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6294,7 +6294,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> ImportOrderWithHttpInfoAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> ImportOrderWithHttpInfoAsync(OrderImportOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6436,7 +6436,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListFulfillmentsResponse</returns>
-        public async System.Threading.Tasks.Task<OrderListFulfillmentsResponse> ListFulfillmentsAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderListFulfillmentsResponse> ListFulfillmentsAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderListFulfillmentsResponse> localVarResponse = await ListFulfillmentsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6450,7 +6450,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListFulfillmentsResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListFulfillmentsResponse>> ListFulfillmentsWithHttpInfoAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListFulfillmentsResponse>> ListFulfillmentsWithHttpInfoAsync(OrderListFulfillmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6592,7 +6592,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersResponse</returns>
-        public async System.Threading.Tasks.Task<OrderListOrdersResponse> ListOrdersAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderListOrdersResponse> ListOrdersAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderListOrdersResponse> localVarResponse = await ListOrdersWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6606,7 +6606,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersResponse>> ListOrdersWithHttpInfoAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersResponse>> ListOrdersWithHttpInfoAsync(OrderListOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6748,7 +6748,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersByCustomerResponse</returns>
-        public async System.Threading.Tasks.Task<OrderListOrdersByCustomerResponse> ListOrdersByCustomerAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderListOrdersByCustomerResponse> ListOrdersByCustomerAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderListOrdersByCustomerResponse> localVarResponse = await ListOrdersByCustomerWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6762,7 +6762,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersByCustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersByCustomerResponse>> ListOrdersByCustomerWithHttpInfoAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersByCustomerResponse>> ListOrdersByCustomerWithHttpInfoAsync(OrderListOrdersByCustomerRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -6904,7 +6904,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListOrdersByNumbersResponse</returns>
-        public async System.Threading.Tasks.Task<OrderListOrdersByNumbersResponse> ListOrdersByNumbersAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderListOrdersByNumbersResponse> ListOrdersByNumbersAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderListOrdersByNumbersResponse> localVarResponse = await ListOrdersByNumbersWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -6918,7 +6918,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListOrdersByNumbersResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersByNumbersResponse>> ListOrdersByNumbersWithHttpInfoAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListOrdersByNumbersResponse>> ListOrdersByNumbersWithHttpInfoAsync(OrderListOrdersByNumbersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7060,7 +7060,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderListShipmentsResponse</returns>
-        public async System.Threading.Tasks.Task<OrderListShipmentsResponse> ListShipmentsAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderListShipmentsResponse> ListShipmentsAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderListShipmentsResponse> localVarResponse = await ListShipmentsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7074,7 +7074,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderListShipmentsResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListShipmentsResponse>> ListShipmentsWithHttpInfoAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderListShipmentsResponse>> ListShipmentsWithHttpInfoAsync(OrderListShipmentsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7216,7 +7216,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> OrderAddDocumentAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await OrderAddDocumentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7230,7 +7230,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderAddDocumentWithHttpInfoAsync(OrderAddDocumentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7372,7 +7372,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> OrderRemoveDocumentByCodeAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await OrderRemoveDocumentByCodeWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7386,7 +7386,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> OrderRemoveDocumentByCodeWithHttpInfoAsync(OrderRemoveDocumentByCodeRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7528,7 +7528,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPrintOrdersLabelsResponse</returns>
-        public async System.Threading.Tasks.Task<OrderPrintOrdersLabelsResponse> PrintOrdersLabelsAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderPrintOrdersLabelsResponse> PrintOrdersLabelsAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderPrintOrdersLabelsResponse> localVarResponse = await PrintOrdersLabelsWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7542,7 +7542,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPrintOrdersLabelsResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPrintOrdersLabelsResponse>> PrintOrdersLabelsWithHttpInfoAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPrintOrdersLabelsResponse>> PrintOrdersLabelsWithHttpInfoAsync(OrderPrintOrdersLabelsRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7684,7 +7684,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> QuashFulfillmentAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> QuashFulfillmentAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await QuashFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7698,7 +7698,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> QuashFulfillmentWithHttpInfoAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> QuashFulfillmentWithHttpInfoAsync(OrderQuashFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7840,7 +7840,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> QuashShipmentAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> QuashShipmentAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await QuashShipmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -7854,7 +7854,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> QuashShipmentWithHttpInfoAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> QuashShipmentWithHttpInfoAsync(OrderQuashShipmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7996,7 +7996,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReceiveFulfillmentAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReceiveFulfillmentAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReceiveFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8010,7 +8010,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReceiveFulfillmentWithHttpInfoAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReceiveFulfillmentWithHttpInfoAsync(OrderReceiveFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8152,7 +8152,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReportFulfillmentErrorAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReportFulfillmentErrorAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReportFulfillmentErrorWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8166,7 +8166,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentErrorWithHttpInfoAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentErrorWithHttpInfoAsync(OrderReportFulfillmentErrorRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8308,7 +8308,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReportFulfillmentNotResolvableAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReportFulfillmentNotResolvableAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReportFulfillmentNotResolvableWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8322,7 +8322,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentNotResolvableWithHttpInfoAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentNotResolvableWithHttpInfoAsync(OrderReportFulfillmentNotResolvableRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8464,7 +8464,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReportFulfillmentReadyAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReportFulfillmentReadyAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReportFulfillmentReadyWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8478,7 +8478,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentReadyWithHttpInfoAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportFulfillmentReadyWithHttpInfoAsync(OrderReportFulfillmentReadyRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8620,7 +8620,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReportShipmentDeliveryAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReportShipmentDeliveryAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReportShipmentDeliveryWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8634,7 +8634,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportShipmentDeliveryWithHttpInfoAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportShipmentDeliveryWithHttpInfoAsync(OrderReportShipmentDeliveryRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8776,7 +8776,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReportShipmentMissingStockAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ReportShipmentMissingStockAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ReportShipmentMissingStockWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8790,7 +8790,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportShipmentMissingStockWithHttpInfoAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ReportShipmentMissingStockWithHttpInfoAsync(OrderReportShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -8932,7 +8932,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ResolveShipmentMissingStockAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> ResolveShipmentMissingStockAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await ResolveShipmentMissingStockWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -8946,7 +8946,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ResolveShipmentMissingStockWithHttpInfoAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> ResolveShipmentMissingStockWithHttpInfoAsync(OrderResolveShipmentMissingStockRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9088,7 +9088,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> RetryFulfillmentAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> RetryFulfillmentAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await RetryFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9102,7 +9102,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> RetryFulfillmentWithHttpInfoAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> RetryFulfillmentWithHttpInfoAsync(OrderRetryFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9244,7 +9244,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderSearchOrdersResponse</returns>
-        public async System.Threading.Tasks.Task<OrderSearchOrdersResponse> SearchOrdersAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderSearchOrdersResponse> SearchOrdersAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderSearchOrdersResponse> localVarResponse = await SearchOrdersWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9258,7 +9258,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderSearchOrdersResponse)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderSearchOrdersResponse>> SearchOrdersWithHttpInfoAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderSearchOrdersResponse>> SearchOrdersWithHttpInfoAsync(OrderSearchOrdersRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9400,7 +9400,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SendFulfillmentAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> SendFulfillmentAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await SendFulfillmentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9414,7 +9414,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> SendFulfillmentWithHttpInfoAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> SendFulfillmentWithHttpInfoAsync(OrderSendFulfillmentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9556,7 +9556,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SendOrderNotificationAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> SendOrderNotificationAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await SendOrderNotificationWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9570,7 +9570,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> SendOrderNotificationWithHttpInfoAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> SendOrderNotificationWithHttpInfoAsync(OrderSendOrderNotificationRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9712,7 +9712,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> StartFulfillmentProcessingAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> StartFulfillmentProcessingAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await StartFulfillmentProcessingWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9726,7 +9726,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> StartFulfillmentProcessingWithHttpInfoAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> StartFulfillmentProcessingWithHttpInfoAsync(OrderStartFulfillmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -9868,7 +9868,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> StartShipmentProcessingAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> StartShipmentProcessingAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await StartShipmentProcessingWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -9882,7 +9882,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> StartShipmentProcessingWithHttpInfoAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> StartShipmentProcessingWithHttpInfoAsync(OrderStartShipmentProcessingRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -10024,7 +10024,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UnholdOrderAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Object> UnholdOrderAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<Object> localVarResponse = await UnholdOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -10038,7 +10038,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> UnholdOrderWithHttpInfoAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<Object>> UnholdOrderWithHttpInfoAsync(OrderUnholdOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -10180,7 +10180,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderOrderData</returns>
-        public async System.Threading.Tasks.Task<OrderOrderData> UpdateOrderAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderOrderData> UpdateOrderAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderOrderData> localVarResponse = await UpdateOrderWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -10194,7 +10194,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderOrderData)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> UpdateOrderWithHttpInfoAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderOrderData>> UpdateOrderWithHttpInfoAsync(OrderUpdateOrderRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -10336,7 +10336,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OrderPayment</returns>
-        public async System.Threading.Tasks.Task<OrderPayment> UpdatePaymentAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OrderPayment> UpdatePaymentAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             order.Client.ApiResponse<OrderPayment> localVarResponse = await UpdatePaymentWithHttpInfoAsync(body, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -10350,7 +10350,7 @@ namespace order.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OrderPayment)</returns>
-        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> UpdatePaymentWithHttpInfoAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<order.Client.ApiResponse<OrderPayment>> UpdatePaymentWithHttpInfoAsync(OrderUpdatePaymentRequest body, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             // verify the required parameter 'body' is set
             if (body == null)
